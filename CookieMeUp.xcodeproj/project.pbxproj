@@ -18,6 +18,7 @@
 		EC13BCD02044C04600836B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC13BCCE2044C04600836B0A /* LaunchScreen.storyboard */; };
 		EC13BCDB2044C04600836B0A /* CookieMeUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13BCDA2044C04600836B0A /* CookieMeUpTests.swift */; };
 		EC13BCE62044C04600836B0A /* CookieMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13BCE52044C04600836B0A /* CookieMeUpUITests.swift */; };
+		EC7F9B4C2072E24800910748 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F9B4B2072E24800910748 /* Colors.swift */; };
 		EC8983692068128B00690B1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8983682068128B00690B1E /* LoginViewController.swift */; };
 		EC89836B206813AE00690B1E /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89836A206813AE00690B1E /* InitialScreenViewController.swift */; };
 		EC89836D2068157800690B1E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89836C2068157800690B1E /* SignUpViewController.swift */; };
@@ -74,6 +75,7 @@
 		EC13BCE12044C04600836B0A /* CookieMeUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookieMeUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC13BCE52044C04600836B0A /* CookieMeUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieMeUpUITests.swift; sourceTree = "<group>"; };
 		EC13BCE72044C04600836B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC7F9B4B2072E24800910748 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC8983682068128B00690B1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EC89836A206813AE00690B1E /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		EC89836C2068157800690B1E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				EC13BCCC2044C04600836B0A /* Assets.xcassets */,
 				EC13BCCE2044C04600836B0A /* LaunchScreen.storyboard */,
 				EC13BCD12044C04600836B0A /* Info.plist */,
+				EC7F9B4B2072E24800910748 /* Colors.swift */,
 			);
 			path = CookieMeUp;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				EC13BCC62044C04600836B0A /* AppDelegate.swift in Sources */,
 				ECD8D9CD206B03D400DEC834 /* DisplayEventsViewController.swift in Sources */,
 				ECBAECB1206ECCD200DC5912 /* BuyerEventCell.swift in Sources */,
+				EC7F9B4C2072E24800910748 /* Colors.swift in Sources */,
 				EC89836B206813AE00690B1E /* InitialScreenViewController.swift in Sources */,
 				EC89836D2068157800690B1E /* SignUpViewController.swift in Sources */,
 				ECBAECAF206EB13400DC5912 /* DetailEventViewController.swift in Sources */,
