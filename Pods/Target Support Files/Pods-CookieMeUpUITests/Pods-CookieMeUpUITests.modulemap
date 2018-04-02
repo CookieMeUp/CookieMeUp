@@ -1,0 +1,6 @@
+framework module Pods_CookieMeUpUITests {
+  umbrella header "Pods-CookieMeUpUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
