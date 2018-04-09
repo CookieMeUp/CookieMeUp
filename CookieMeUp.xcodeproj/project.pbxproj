@@ -18,6 +18,13 @@
 		EC13BCD02044C04600836B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC13BCCE2044C04600836B0A /* LaunchScreen.storyboard */; };
 		EC13BCDB2044C04600836B0A /* CookieMeUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13BCDA2044C04600836B0A /* CookieMeUpTests.swift */; };
 		EC13BCE62044C04600836B0A /* CookieMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13BCE52044C04600836B0A /* CookieMeUpUITests.swift */; };
+		EC59B71B207C13C80049AB3C /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B714207C13BF0049AB3C /* Quicksand-Light.otf */; };
+		EC59B71C207C13C80049AB3C /* Quicksand-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B715207C13C00049AB3C /* Quicksand-BoldItalic.otf */; };
+		EC59B71D207C13C80049AB3C /* Quicksand-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B716207C13C20049AB3C /* Quicksand-LightItalic.otf */; };
+		EC59B71E207C13C80049AB3C /* Quicksand-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B717207C13C30049AB3C /* Quicksand-Bold.otf */; };
+		EC59B71F207C13C80049AB3C /* Quicksand_Dash.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B718207C13C40049AB3C /* Quicksand_Dash.otf */; };
+		EC59B720207C13C80049AB3C /* Quicksand-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B719207C13C60049AB3C /* Quicksand-Italic.otf */; };
+		EC59B721207C13C80049AB3C /* Quicksand-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B71A207C13C70049AB3C /* Quicksand-Regular.otf */; };
 		EC7F9B4C2072E24800910748 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7F9B4B2072E24800910748 /* Colors.swift */; };
 		EC8983692068128B00690B1E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8983682068128B00690B1E /* LoginViewController.swift */; };
 		EC89836B206813AE00690B1E /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89836A206813AE00690B1E /* InitialScreenViewController.swift */; };
@@ -28,13 +35,6 @@
 		ECB2365B206DA8490092C3F5 /* InitialSellerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB2365A206DA8490092C3F5 /* InitialSellerViewController.swift */; };
 		ECBAECAF206EB13400DC5912 /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBAECAE206EB13400DC5912 /* DetailEventViewController.swift */; };
 		ECBAECB1206ECCD200DC5912 /* BuyerEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBAECB0206ECCD200DC5912 /* BuyerEventCell.swift */; };
-		ECCD4CCD207AF56600819F28 /* Quicksand_Dash.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECCD4CC6207AF56600819F28 /* Quicksand_Dash.otf */; };
-		ECCD4CCE207AF56600819F28 /* Quicksand-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECCD4CC7207AF56600819F28 /* Quicksand-Bold.otf */; };
-		ECCD4CCF207AF56600819F28 /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECCD4CC8207AF56600819F28 /* Quicksand-Light.otf */; };
-		ECCD4CD0207AF56600819F28 /* Quicksand-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECCD4CC9207AF56600819F28 /* Quicksand-LightItalic.otf */; };
-		ECCD4CD1207AF56600819F28 /* Quicksand-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECCD4CCA207AF56600819F28 /* Quicksand-BoldItalic.otf */; };
-		ECCD4CD2207AF56600819F28 /* Quicksand-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECCD4CCB207AF56600819F28 /* Quicksand-Regular.otf */; };
-		ECCD4CD3207AF56600819F28 /* Quicksand-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECCD4CCC207AF56600819F28 /* Quicksand-Italic.otf */; };
 		ECD8D9CB206AF13000DEC834 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8D9CA206AF13000DEC834 /* Event.swift */; };
 		ECD8D9CD206B03D400DEC834 /* DisplayEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8D9CC206B03D400DEC834 /* DisplayEventsViewController.swift */; };
 		ECD8D9D2206B0D5B00DEC834 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8D9D1206B0D5B00DEC834 /* EventCell.swift */; };
@@ -82,6 +82,13 @@
 		EC13BCE12044C04600836B0A /* CookieMeUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookieMeUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC13BCE52044C04600836B0A /* CookieMeUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieMeUpUITests.swift; sourceTree = "<group>"; };
 		EC13BCE72044C04600836B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC59B714207C13BF0049AB3C /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Light.otf"; path = "Fonts/Quicksand-Light.otf"; sourceTree = SOURCE_ROOT; };
+		EC59B715207C13C00049AB3C /* Quicksand-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-BoldItalic.otf"; path = "Fonts/Quicksand-BoldItalic.otf"; sourceTree = SOURCE_ROOT; };
+		EC59B716207C13C20049AB3C /* Quicksand-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-LightItalic.otf"; path = "Fonts/Quicksand-LightItalic.otf"; sourceTree = SOURCE_ROOT; };
+		EC59B717207C13C30049AB3C /* Quicksand-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.otf"; path = "Fonts/Quicksand-Bold.otf"; sourceTree = SOURCE_ROOT; };
+		EC59B718207C13C40049AB3C /* Quicksand_Dash.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Quicksand_Dash.otf; path = Fonts/Quicksand_Dash.otf; sourceTree = SOURCE_ROOT; };
+		EC59B719207C13C60049AB3C /* Quicksand-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Italic.otf"; path = "Fonts/Quicksand-Italic.otf"; sourceTree = SOURCE_ROOT; };
+		EC59B71A207C13C70049AB3C /* Quicksand-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Regular.otf"; path = "Fonts/Quicksand-Regular.otf"; sourceTree = SOURCE_ROOT; };
 		EC7F9B4B2072E24800910748 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC8983682068128B00690B1E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EC89836A206813AE00690B1E /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
@@ -92,13 +99,6 @@
 		ECB2365A206DA8490092C3F5 /* InitialSellerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSellerViewController.swift; sourceTree = "<group>"; };
 		ECBAECAE206EB13400DC5912 /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
 		ECBAECB0206ECCD200DC5912 /* BuyerEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerEventCell.swift; sourceTree = "<group>"; };
-		ECCD4CC6207AF56600819F28 /* Quicksand_Dash.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Quicksand_Dash.otf; path = ../../../../Downloads/quicksand/Quicksand_Dash.otf; sourceTree = "<group>"; };
-		ECCD4CC7207AF56600819F28 /* Quicksand-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Bold.otf"; path = "../../../../Downloads/quicksand/Quicksand-Bold.otf"; sourceTree = "<group>"; };
-		ECCD4CC8207AF56600819F28 /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Light.otf"; path = "../../../../Downloads/quicksand/Quicksand-Light.otf"; sourceTree = "<group>"; };
-		ECCD4CC9207AF56600819F28 /* Quicksand-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-LightItalic.otf"; path = "../../../../Downloads/quicksand/Quicksand-LightItalic.otf"; sourceTree = "<group>"; };
-		ECCD4CCA207AF56600819F28 /* Quicksand-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-BoldItalic.otf"; path = "../../../../Downloads/quicksand/Quicksand-BoldItalic.otf"; sourceTree = "<group>"; };
-		ECCD4CCB207AF56600819F28 /* Quicksand-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Regular.otf"; path = "../../../../Downloads/quicksand/Quicksand-Regular.otf"; sourceTree = "<group>"; };
-		ECCD4CCC207AF56600819F28 /* Quicksand-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Italic.otf"; path = "../../../../Downloads/quicksand/Quicksand-Italic.otf"; sourceTree = "<group>"; };
 		ECD8D9CA206AF13000DEC834 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		ECD8D9CC206B03D400DEC834 /* DisplayEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayEventsViewController.swift; sourceTree = "<group>"; };
 		ECD8D9D1206B0D5B00DEC834 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		EC13BCC42044C04600836B0A /* CookieMeUp */ = {
 			isa = PBXGroup;
 			children = (
-				ECCD4CBF207AEEC900819F28 /* Fonts */,
+				EC59B713207C13A20049AB3C /* fonts */,
 				ECD8D9CE206B0D2C00DEC834 /* Views */,
 				EC89837420681EC700690B1E /* Models */,
 				EC8983672068127200690B1E /* ViewControllers */,
@@ -215,6 +215,20 @@
 			path = CookieMeUpUITests;
 			sourceTree = "<group>";
 		};
+		EC59B713207C13A20049AB3C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EC59B718207C13C40049AB3C /* Quicksand_Dash.otf */,
+				EC59B717207C13C30049AB3C /* Quicksand-Bold.otf */,
+				EC59B715207C13C00049AB3C /* Quicksand-BoldItalic.otf */,
+				EC59B719207C13C60049AB3C /* Quicksand-Italic.otf */,
+				EC59B714207C13BF0049AB3C /* Quicksand-Light.otf */,
+				EC59B716207C13C20049AB3C /* Quicksand-LightItalic.otf */,
+				EC59B71A207C13C70049AB3C /* Quicksand-Regular.otf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		EC8983672068127200690B1E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,20 +252,6 @@
 				EC05D439206B383100C4057D /* simpleEvent.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		ECCD4CBF207AEEC900819F28 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				ECCD4CC6207AF56600819F28 /* Quicksand_Dash.otf */,
-				ECCD4CC7207AF56600819F28 /* Quicksand-Bold.otf */,
-				ECCD4CCA207AF56600819F28 /* Quicksand-BoldItalic.otf */,
-				ECCD4CCC207AF56600819F28 /* Quicksand-Italic.otf */,
-				ECCD4CC8207AF56600819F28 /* Quicksand-Light.otf */,
-				ECCD4CC9207AF56600819F28 /* Quicksand-LightItalic.otf */,
-				ECCD4CCB207AF56600819F28 /* Quicksand-Regular.otf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		ECD8D9CE206B0D2C00DEC834 /* Views */ = {
@@ -379,17 +379,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECCD4CCE207AF56600819F28 /* Quicksand-Bold.otf in Resources */,
-				ECCD4CCD207AF56600819F28 /* Quicksand_Dash.otf in Resources */,
 				EC13BCD02044C04600836B0A /* LaunchScreen.storyboard in Resources */,
 				EC89837120681AF300690B1E /* GoogleService-Info.plist in Resources */,
-				ECCD4CD2207AF56600819F28 /* Quicksand-Regular.otf in Resources */,
+				EC59B71E207C13C80049AB3C /* Quicksand-Bold.otf in Resources */,
+				EC59B720207C13C80049AB3C /* Quicksand-Italic.otf in Resources */,
+				EC59B71C207C13C80049AB3C /* Quicksand-BoldItalic.otf in Resources */,
 				EC13BCCD2044C04600836B0A /* Assets.xcassets in Resources */,
-				ECCD4CD3207AF56600819F28 /* Quicksand-Italic.otf in Resources */,
-				ECCD4CD1207AF56600819F28 /* Quicksand-BoldItalic.otf in Resources */,
+				EC59B721207C13C80049AB3C /* Quicksand-Regular.otf in Resources */,
+				EC59B71D207C13C80049AB3C /* Quicksand-LightItalic.otf in Resources */,
+				EC59B71F207C13C80049AB3C /* Quicksand_Dash.otf in Resources */,
 				EC13BCCB2044C04600836B0A /* Main.storyboard in Resources */,
-				ECCD4CD0207AF56600819F28 /* Quicksand-LightItalic.otf in Resources */,
-				ECCD4CCF207AF56600819F28 /* Quicksand-Light.otf in Resources */,
+				EC59B71B207C13C80049AB3C /* Quicksand-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
