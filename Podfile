@@ -15,6 +15,8 @@ target 'CookieMeUp' do
   pod 'Firebase/Database'
   pod 'AFNetworking'
   pod 'DateTimePicker'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
+
   target 'CookieMeUpTests' do
     inherit! :search_paths
     # Pods for testing

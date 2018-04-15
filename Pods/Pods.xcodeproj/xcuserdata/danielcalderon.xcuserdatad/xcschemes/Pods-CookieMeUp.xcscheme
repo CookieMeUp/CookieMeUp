@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A58DEA4E8219BCF68A634531B9274EA0"
+               BlueprintIdentifier = "A7FA510242A0D408298E9FD025E97310"
                BuildableName = "Pods_CookieMeUp.framework"
                BlueprintName = "Pods-CookieMeUp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A58DEA4E8219BCF68A634531B9274EA0"
+            BlueprintIdentifier = "A7FA510242A0D408298E9FD025E97310"
             BuildableName = "Pods_CookieMeUp.framework"
             BlueprintName = "Pods-CookieMeUp"
             ReferencedContainer = "container:Pods.xcodeproj">

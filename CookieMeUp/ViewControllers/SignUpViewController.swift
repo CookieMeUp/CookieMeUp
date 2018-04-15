@@ -10,18 +10,19 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController,UITextFieldDelegate {
     var ref: DatabaseReference!
-    @IBOutlet weak var girlScoutIdTextView: UITextField!
-    @IBOutlet weak var firstNameTextView: UITextField!
-    @IBOutlet weak var emailTextView: UITextField!
-    @IBOutlet weak var passwordTextView: UITextField!
+    @IBOutlet weak var signUpBUtton: UIButton!
+    
+    @IBOutlet weak var girlScoutIdTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var firstNameTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var emailTextField: SkyFloatingLabelTextField!
+    @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureFirebaseDatabaseReference()
-
         // Do any additional setup after loading the view.
         
     }
@@ -30,8 +31,19 @@ class SignUpViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     @IBAction func onTapSignUp(_ sender: Any) {
-        if let email = self.emailTextView.text, let password = self.passwordTextView.text,let id = girlScoutIdTextView.text{
+        if let email = self.emailTextField.text, let password = self.passwordTextField.text,let id = girlScoutIdTextField.text{
+            //TODO: ONCE ACCESS TO GIRLSCOUT DATABSE WE CAN BEGGIN CHECKING THIS PARt
+            if (emailTextField.text?.count)! < 3{
+                emailTextField.errorMessage = "Invalid Email"
+                if (passwordTextField.text?.count)! < 4{
+                    emailTextField.errorMessage = "Invalid Password"
+                    return
+                }
+                return
+            }
+       
             ref.child("GirlScoutIds").observeSingleEvent(of: .value) { (snapshot) in
                 let dict = snapshot.value as? [String: AnyObject] ?? [:]
                 let values = dict.values as? String

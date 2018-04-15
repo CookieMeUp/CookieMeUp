@@ -72,6 +72,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SkyFloatingLabelTextField (3.4.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -82,6 +83,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GoogleMaps
   - GooglePlaces
+  - SkyFloatingLabelTextField (~> 3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
@@ -99,7 +101,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5bb1eae636127de695590f50e7d248483eb891e6
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
 
-PODFILE CHECKSUM: fb3730cab238d5907eb8f233f3a01307e89b069d
+PODFILE CHECKSUM: 4b0a701505bd2aabb273f8568a6ac7c94090ceb9
 
 COCOAPODS: 1.4.0

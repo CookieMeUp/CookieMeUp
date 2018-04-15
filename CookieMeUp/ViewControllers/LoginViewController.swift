@@ -9,20 +9,14 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
-    @IBOutlet weak var emailTextView: UITextField!
-    @IBOutlet weak var passwordTextView: UITextField!
-    let alertController = UIAlertController(title: "Alert", message: "Missing Password and/or Username", preferredStyle: .alert)
+class LoginViewController: UIViewController,UITextFieldDelegate {
+    @IBOutlet weak var emailTextView: SkyFloatingLabelTextField!
+    
+    @IBOutlet weak var passwordTextView: SkyFloatingLabelTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextView.errorColor = UIColor.red
 
-        //Setting up the Alert Controller
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-        }
-        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-        }
-        alertController.addAction(cancelAction)
-        alertController.addAction(OKAction)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,31 +24,35 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func onTapSignIn(_ sender: Any) {
+
+        
         if let email = self.emailTextView.text, let password = self.passwordTextView.text {
                 // [START headless_email_auth]
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                     // [START_EXCLUDE]
-                        if let error = error {
-                            self.alertController.message = error.localizedDescription
-                            self.present(self.alertController, animated: true) {
+                    if error != nil{
+                        if let errCode = AuthErrorCode(rawValue: error!._code) {
+                            switch errCode{
+                                case .invalidEmail:
+                                    self.emailTextView.errorMessage = "Invalid Email."
+                                case .userNotFound:
+                                    self.emailTextView.errorMessage = "User not found."
+                                case .wrongPassword:
+                                    self.passwordTextView.errorMessage = "Invalid Password"
+                                case .emailAlreadyInUse:
+                                    self.emailTextView.errorMessage = "Email in use."
+                                
+                                default: break
+                                
                             }
                             return
                         }
+                    }
                     let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "InitialSellerScreen")
-                    
-                    // your code
-                    
                     self.present(newViewController!, animated: true, completion: nil)
-                    // [END_EXCLUDE]
                 }
-                // [END headless_email_auth]
-        } else {
-            self.alertController.message = "Password Or Email Field Cannot Be Empty."
-            present(alertController, animated: true) {
-            }
         }
     }
-    
     /*
     // MARK: - Navigation
 

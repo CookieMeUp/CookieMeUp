@@ -18,6 +18,9 @@
 		EC13BCD02044C04600836B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC13BCCE2044C04600836B0A /* LaunchScreen.storyboard */; };
 		EC13BCDB2044C04600836B0A /* CookieMeUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13BCDA2044C04600836B0A /* CookieMeUpTests.swift */; };
 		EC13BCE62044C04600836B0A /* CookieMeUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC13BCE52044C04600836B0A /* CookieMeUpUITests.swift */; };
+		EC40CC982083EE9B00C7A6BD /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40CC972083EE9B00C7A6BD /* SkyFloatingLabelTextField.swift */; };
+		EC40CC9A2083EEB200C7A6BD /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40CC992083EEB200C7A6BD /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		EC40CC9C2083EEB600C7A6BD /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC40CC9B2083EEB600C7A6BD /* UITextField+fixCaretPosition.swift */; };
 		EC59B71B207C13C80049AB3C /* Quicksand-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B714207C13BF0049AB3C /* Quicksand-Light.otf */; };
 		EC59B71C207C13C80049AB3C /* Quicksand-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B715207C13C00049AB3C /* Quicksand-BoldItalic.otf */; };
 		EC59B71D207C13C80049AB3C /* Quicksand-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC59B716207C13C20049AB3C /* Quicksand-LightItalic.otf */; };
@@ -82,6 +85,9 @@
 		EC13BCE12044C04600836B0A /* CookieMeUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookieMeUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC13BCE52044C04600836B0A /* CookieMeUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieMeUpUITests.swift; sourceTree = "<group>"; };
 		EC13BCE72044C04600836B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC40CC972083EE9B00C7A6BD /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		EC40CC992083EEB200C7A6BD /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		EC40CC9B2083EEB600C7A6BD /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
 		EC59B714207C13BF0049AB3C /* Quicksand-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-Light.otf"; path = "Fonts/Quicksand-Light.otf"; sourceTree = SOURCE_ROOT; };
 		EC59B715207C13C00049AB3C /* Quicksand-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-BoldItalic.otf"; path = "Fonts/Quicksand-BoldItalic.otf"; sourceTree = SOURCE_ROOT; };
 		EC59B716207C13C20049AB3C /* Quicksand-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Quicksand-LightItalic.otf"; path = "Fonts/Quicksand-LightItalic.otf"; sourceTree = SOURCE_ROOT; };
@@ -181,6 +187,9 @@
 		EC13BCC42044C04600836B0A /* CookieMeUp */ = {
 			isa = PBXGroup;
 			children = (
+				EC40CC972083EE9B00C7A6BD /* SkyFloatingLabelTextField.swift */,
+				EC40CC992083EEB200C7A6BD /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				EC40CC9B2083EEB600C7A6BD /* UITextField+fixCaretPosition.swift */,
 				EC59B713207C13A20049AB3C /* fonts */,
 				ECD8D9CE206B0D2C00DEC834 /* Views */,
 				EC89837420681EC700690B1E /* Models */,
@@ -555,6 +564,7 @@
 				"${BUILT_PRODUCTS_DIR}/DateTimePicker/DateTimePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -564,6 +574,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTimePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -580,15 +591,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD8D9CB206AF13000DEC834 /* Event.swift in Sources */,
+				EC40CC9A2083EEB200C7A6BD /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				ECD8D9D4206B0DF900DEC834 /* EventViewController.swift in Sources */,
 				EC8983692068128B00690B1E /* LoginViewController.swift in Sources */,
 				ECD8D9D2206B0D5B00DEC834 /* EventCell.swift in Sources */,
 				EC05D43A206B383100C4057D /* simpleEvent.swift in Sources */,
+				EC40CC982083EE9B00C7A6BD /* SkyFloatingLabelTextField.swift in Sources */,
 				EC13BCC82044C04600836B0A /* ViewController.swift in Sources */,
 				EC13BCC62044C04600836B0A /* AppDelegate.swift in Sources */,
 				ECD8D9CD206B03D400DEC834 /* DisplayEventsViewController.swift in Sources */,
 				ECBAECB1206ECCD200DC5912 /* BuyerEventCell.swift in Sources */,
 				EC7F9B4C2072E24800910748 /* Colors.swift in Sources */,
+				EC40CC9C2083EEB600C7A6BD /* UITextField+fixCaretPosition.swift in Sources */,
 				EC89836B206813AE00690B1E /* InitialScreenViewController.swift in Sources */,
 				EC89836D2068157800690B1E /* SignUpViewController.swift in Sources */,
 				ECBAECAF206EB13400DC5912 /* DetailEventViewController.swift in Sources */,
