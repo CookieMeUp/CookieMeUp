@@ -154,13 +154,9 @@
                     <navigationItem key="navigationItem" id="hQW-sf-9KO"/>
                     <connections>
                         <outlet property="emailTextField" destination="UgG-3V-awV" id="bdc-G4-POK"/>
-                        <outlet property="emailTextView" destination="UgG-3V-awV" id="1cM-fe-cBI"/>
                         <outlet property="firstNameTextField" destination="oEn-F7-QQQ" id="H6V-co-lDP"/>
-                        <outlet property="firstNameTextView" destination="oEn-F7-QQQ" id="Dnp-N3-Rx7"/>
                         <outlet property="girlScoutIdTextField" destination="i0g-gz-wu6" id="bak-EZ-5cU"/>
-                        <outlet property="girlScoutIdTextView" destination="i0g-gz-wu6" id="sPh-pK-4qB"/>
                         <outlet property="passwordTextField" destination="SgN-9d-2jK" id="JAs-a2-aUH"/>
-                        <outlet property="passwordTextView" destination="SgN-9d-2jK" id="Ron-tC-MtJ"/>
                         <outlet property="signUpBUtton" destination="1fB-j4-phr" id="1hF-X0-jlt"/>
                     </connections>
                 </viewController>
