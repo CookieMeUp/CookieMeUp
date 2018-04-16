@@ -497,7 +497,7 @@
                                 <action selector="onTapLogout:" destination="QEl-Wx-E5F" id="V6G-VM-RvX"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Create" id="k1J-mw-ELv">
+                        <barButtonItem key="rightBarButtonItem" title="Create" image="add-icon" id="k1J-mw-ELv">
                             <connections>
                                 <segue destination="8dZ-QT-hGA" kind="show" identifier="createSegue" id="alA-aT-l7X"/>
                             </connections>
@@ -643,6 +643,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add-icon" width="16" height="16"/>
         <image name="cookie-icon" width="90" height="90"/>
         <image name="list-icon" width="16" height="16"/>
         <image name="location-icon" width="16" height="16"/>

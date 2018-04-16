@@ -18,7 +18,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     var picker: DateTimePicker?
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    
+    var dPicker: DateTimePicker?
     var selectedLocation: CLLocation?
     var selectedAdress: String?
     var locationManager = CLLocationManager()
@@ -110,7 +110,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         picker.timeInterval = DateTimePicker.MinuteInterval.five
         picker.highlightColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
         picker.darkColor = UIColor.darkGray
-        picker.doneButtonTitle = "!! DONE DONE !!"
+        picker.doneButtonTitle = "DONE"
         picker.doneBackgroundColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
         picker.locale = Locale(identifier: "en_GB")
         
@@ -130,6 +130,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
+        dPicker = picker
        dateLabel.text = picker.selectedDateString
     }
     override func didReceiveMemoryWarning() {
@@ -142,7 +143,28 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         let ref = Database.database().reference()
         let randomID = ref.child("users").child((user?.uid)!).child("events").childByAutoId()
         let newEvent = ["latitude" : (selectedLocation?.coordinate.latitude)!, "longitude": selectedLocation?.coordinate.longitude as Any, "address": selectedAdress!,"dateString": dateLabel.text!,"id": randomID.key,"firebaseUid": user?.uid] as [String : Any]
-        ref.child("users").child((user?.uid)!).child("events").child(randomID.key).setValue(newEvent)
+        ref.child("users").child((user?.uid)!).child("events").observeSingleEvent(of: .value) { (snapshot) in
+            let events = snapshot.value as? [String: AnyObject] ?? [:]
+            let formatter = DateFormatter()
+            formatter.dateFormat = "hh:mm aa dd/MM/YYYY"
+            formatter.locale = Locale(identifier: "en_GB")
+            formatter.timeZone = TimeZone(secondsFromGMT: 0)
+            for item in events{
+                let date = formatter.date(from: item.value["dateString"] as! String)
+                let newEventDate = formatter.date(from: (self.dPicker?.selectedDateString)!)
+                print("Getting differencet")
+                print(formatter.date(from: item.value["dateString"] as! String)!)
+                print(newEventDate?.timeIntervalSince(date!))
+                let timePassed = newEventDate?.timeIntervalSince(date!) as! Double
+                if( item.value["latitude"] as? Double == newEvent["latitude"] as? Double && item.value["longitude"] as? Double == newEvent["longitude"] as? Double &&  timePassed < 1800.00){
+                    print("NotMkaingEvent")
+                    return
+                }else{
+                    ref.child("users").child((user?.uid)!).child("events").child(randomID.key).setValue(newEvent)
+                }
+            }
+        }
+
         
     }
     
