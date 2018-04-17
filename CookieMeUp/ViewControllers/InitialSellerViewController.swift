@@ -17,10 +17,12 @@ class InitialSellerViewController: UIViewController,UITableViewDataSource,UITabl
     let cellIdentifier = "SellerEventCell"
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView()
         let user = Auth.auth().currentUser
         ref = Database.database().reference()
         ref.child("users").child((user?.uid)!).child("events").observeSingleEvent(of: .value) { (snapshot) in
@@ -46,6 +48,7 @@ class InitialSellerViewController: UIViewController,UITableViewDataSource,UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! EventCell
         let info = data[indexPath.row]
         cell.addressLabel.text = info.address
+        //cell.layer.borderColor = UIColor(red: 216/255.0, green: 100/255.0, blue: 73/255.0, alpha: 1.0).cgColor
         cell.dateLabel.text = info.dateString
         return cell
     }
