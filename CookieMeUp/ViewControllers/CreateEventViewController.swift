@@ -14,10 +14,10 @@ import GoogleMaps
 import DateTimePicker
 
 class CreateEventViewController: UIViewController,DateTimePickerDelegate{
+    @IBOutlet weak var calendarButton: UIButton!
     var placeMark: CLPlacemark?
     var picker: DateTimePicker?
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
     var dPicker: DateTimePicker?
     var selectedLocation: CLLocation?
     var selectedAdress: String?
@@ -29,6 +29,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     // The currently selected place.
     var selectedPlace: GMSPlace?
     let defaultLocation = CLLocation(latitude: -33.869405, longitude: 151.199)
+    @IBOutlet weak var searchView: UIView!
     
     @IBOutlet weak var mapSubView: UIView!
     //Search for Place With Auto Complete
@@ -65,17 +66,15 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.searchResultsUpdater = resultsViewController
-        
-        // Put the search bar in the navigation bar.
+        searchController?.searchBar.backgroundImage = UIImage()
+        searchView.addSubview((searchController?.searchBar)!)
         searchController?.searchBar.sizeToFit()
-        navigationItem.titleView = searchController?.searchBar
+        searchController?.hidesNavigationBarDuringPresentation = false
+     
         
         // When UISearchController presents the results view, present it in
         // this view controller, not one further up the chain.
         definesPresentationContext = true
-        
-        // Prevent the navigation bar from being hidden when searching.
-        searchController?.hidesNavigationBarDuringPresentation = false
     }
     func zoomToSearchedLocation(){
         let geoCoder = CLGeocoder()
@@ -116,12 +115,12 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         
         picker.todayButtonTitle = "Today"
         picker.is12HourFormat = true
-        picker.dateFormat = "hh:mm aa dd/MM/YYYY"
+        picker.dateFormat = "hh:mm aa MM/dd/YYYY"
         //        picker.isTimePickerOnly = true
         picker.includeMonth = false // if true the month shows at top
         picker.completionHandler = { date in
             let formatter = DateFormatter()
-            formatter.dateFormat = "hh:mm aa dd/MM/YYYY"
+            formatter.dateFormat = "hh:mm aa MM/dd/YYYY"
             self.title = formatter.string(from: date)
         }
         picker.delegate = self
@@ -146,7 +145,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         ref.child("users").child((user?.uid)!).child("events").observeSingleEvent(of: .value) { (snapshot) in
             let events = snapshot.value as? [String: AnyObject] ?? [:]
             let formatter = DateFormatter()
-            formatter.dateFormat = "hh:mm aa dd/MM/YYYY"
+            formatter.dateFormat = "hh:mm aa MM/dd/YYYY"
             formatter.locale = Locale(identifier: "en_GB")
             formatter.timeZone = TimeZone(secondsFromGMT: 0)
             for item in events{
@@ -192,8 +191,7 @@ extension CreateEventViewController: CLLocationManagerDelegate {
             formatAddress = formatAddress + placeMark.postalCode! + ","
             formatAddress = formatAddress + placeMark.country!
   
-            self.addressLabel.text = formatAddress
-            self.selectedAdress = self.addressLabel.text
+            self.selectedAdress = formatAddress
         })
         //END
         let marker = GMSMarker()
@@ -233,13 +231,14 @@ extension CreateEventViewController: CLLocationManagerDelegate {
     }
 }
 extension CreateEventViewController: GMSAutocompleteResultsViewControllerDelegate {
+    
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
                            didAutocompleteWith place: GMSPlace) {
+              self.searchController?.searchBar.frame.size.width = self.searchView.frame.size.width
         searchController?.isActive = false
-
+        
         selectedAdress = place.formattedAddress
         searchController?.searchBar.text = selectedAdress
-        addressLabel.text = selectedAdress
         zoomToSearchedLocation()
     }
     
