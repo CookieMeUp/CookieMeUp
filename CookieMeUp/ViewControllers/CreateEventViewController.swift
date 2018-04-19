@@ -106,11 +106,13 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
         let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
         let picker = DateTimePicker.show(selected: Date(), minimumDate: min, maximumDate: max)
+        picker.doneBackgroundColor = UIColor(red: 249/255.0, green: 228/255.0, blue: 200/255.0, alpha: 1.0)
         picker.timeInterval = DateTimePicker.MinuteInterval.five
-        picker.highlightColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+
+        picker.highlightColor = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
         picker.darkColor = UIColor.darkGray
         picker.doneButtonTitle = "DONE"
-        picker.doneBackgroundColor = UIColor(red: 255.0/255.0, green: 138.0/255.0, blue: 138.0/255.0, alpha: 1)
+        picker.doneBackgroundColor = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
         picker.locale = Locale(identifier: "en_GB")
         
         picker.todayButtonTitle = "Today"

@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "calendar-icon@3x.png",
+      "filename" : "forward-arrow.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "forward-arrow@2x.png",
       "scale" : "2x"
     },
     {
