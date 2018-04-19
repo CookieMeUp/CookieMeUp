@@ -101,49 +101,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0g-gz-wu6" customClass="SkyFloatingLabelTextField" customModule="CookieMeUp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="99" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0g-gz-wu6" customClass="SkyFloatingLabelTextField" customModule="CookieMeUp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="94" width="354" height="39.333333333333343"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="GirlScoutId"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.53404241799999996" green="0.3394698203" blue="0.2264783829" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.37094807619999998" green="0.1239730865" blue="0.13301275670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEn-F7-QQQ" customClass="SkyFloatingLabelTextField" customModule="CookieMeUp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="192" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEn-F7-QQQ" customClass="SkyFloatingLabelTextField" customModule="CookieMeUp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="153.33333333333334" width="354" height="39.333333333333343"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="FirstName"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.53404241799999996" green="0.3394698203" blue="0.2264783829" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.37094807619999998" green="0.1239730865" blue="0.13301275670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UgG-3V-awV" customClass="SkyFloatingLabelTextField" customModule="CookieMeUp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="259" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UgG-3V-awV" customClass="SkyFloatingLabelTextField" customModule="CookieMeUp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="212.66666666666666" width="354" height="39.333333333333343"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.53404241799999996" green="0.3394698203" blue="0.2264783829" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.37094807619999998" green="0.1239730865" blue="0.13301275670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-9d-2jK" customClass="SkyFloatingLabelTextField" customModule="CookieMeUp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="326" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-9d-2jK" customClass="SkyFloatingLabelTextField" customModule="CookieMeUp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="272" width="354" height="39.333333333333314"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" red="0.53404241799999996" green="0.3394698203" blue="0.2264783829" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="0.37094807619999998" green="0.1239730865" blue="0.13301275670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-j4-phr">
-                                <rect key="frame" x="166" y="412" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-j4-phr">
+                                <rect key="frame" x="182" y="331.33333333333331" width="50" height="30"/>
                                 <state key="normal" title="SignUp">
                                     <color key="titleColor" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -153,6 +184,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9730905294418335" green="0.87546408176422119" blue="0.73783421516418457" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="i0g-gz-wu6" firstAttribute="top" secondItem="Ddx-bg-JTs" secondAttribute="top" constant="30" id="0IJ-DS-ZVZ"/>
+                            <constraint firstItem="SgN-9d-2jK" firstAttribute="leading" secondItem="i0g-gz-wu6" secondAttribute="leading" id="DJ1-FY-1Xy"/>
+                            <constraint firstItem="SgN-9d-2jK" firstAttribute="centerX" secondItem="Yq0-kA-ceh" secondAttribute="centerX" id="Kdp-qx-K46"/>
+                            <constraint firstItem="UgG-3V-awV" firstAttribute="top" secondItem="oEn-F7-QQQ" secondAttribute="bottom" constant="20" id="OAz-9x-rhB"/>
+                            <constraint firstItem="Ddx-bg-JTs" firstAttribute="trailing" secondItem="i0g-gz-wu6" secondAttribute="trailing" constant="30" id="Tep-Ta-HAa"/>
+                            <constraint firstItem="oEn-F7-QQQ" firstAttribute="trailing" secondItem="i0g-gz-wu6" secondAttribute="trailing" id="Vgn-4g-uEB"/>
+                            <constraint firstItem="SgN-9d-2jK" firstAttribute="trailing" secondItem="i0g-gz-wu6" secondAttribute="trailing" id="eqx-6T-LYw"/>
+                            <constraint firstItem="SgN-9d-2jK" firstAttribute="top" secondItem="UgG-3V-awV" secondAttribute="bottom" constant="20" id="eyR-hT-b4A"/>
+                            <constraint firstItem="UgG-3V-awV" firstAttribute="leading" secondItem="i0g-gz-wu6" secondAttribute="leading" id="fsP-M4-Bqr"/>
+                            <constraint firstItem="oEn-F7-QQQ" firstAttribute="top" secondItem="i0g-gz-wu6" secondAttribute="bottom" constant="20" id="i5T-jW-7hK"/>
+                            <constraint firstItem="oEn-F7-QQQ" firstAttribute="leading" secondItem="i0g-gz-wu6" secondAttribute="leading" id="j1f-v2-WbM"/>
+                            <constraint firstItem="1fB-j4-phr" firstAttribute="centerX" secondItem="Yq0-kA-ceh" secondAttribute="centerX" id="rKU-Tn-bFv"/>
+                            <constraint firstItem="i0g-gz-wu6" firstAttribute="leading" secondItem="Ddx-bg-JTs" secondAttribute="leading" constant="30" id="wsd-no-1Ki"/>
+                            <constraint firstItem="UgG-3V-awV" firstAttribute="trailing" secondItem="i0g-gz-wu6" secondAttribute="trailing" id="yWC-dj-BVT"/>
+                            <constraint firstItem="1fB-j4-phr" firstAttribute="top" secondItem="SgN-9d-2jK" secondAttribute="bottom" constant="20" id="ypQ-IG-BrP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ddx-bg-JTs"/>
                     </view>
                     <navigationItem key="navigationItem" id="hQW-sf-9KO"/>
