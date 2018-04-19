@@ -11,11 +11,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Quicksand-LightItalic.otf">
-            <string>Quicksand-LightItalic</string>
+        <array key="Quicksand-Bold.otf">
+            <string>Quicksand-Bold</string>
         </array>
-        <array key="Quicksand_Dash.otf">
-            <string>QuicksandDash-Regular</string>
+        <array key="Quicksand-Light.otf">
+            <string>Quicksand-Light</string>
         </array>
     </customFonts>
     <scenes>
@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGH-g2-sCh">
-                                <rect key="frame" x="183.33333333333334" y="540" width="49" height="36"/>
+                                <rect key="frame" x="183.33333333333334" y="435.33333333333331" width="49" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Seller">
                                     <color key="titleColor" red="0.80697774887084961" green="0.30521738529205322" blue="0.22755292057991028" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,26 +39,26 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Cookie Adventures Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="us4-th-hfh">
-                                <rect key="frame" x="75" y="303.66666666666669" width="265.33333333333331" height="17.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Quicksand-LightItalic" family="Quicksand" pointSize="16"/>
+                                <rect key="frame" x="54" y="328.33333333333331" width="307" height="21"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Light" family="Quicksand" pointSize="18"/>
                                 <color key="textColor" red="0.37094807624816895" green="0.12397308647632599" blue="0.13301275670528412" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookieMeUp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="vSH-dW-7o6">
-                                <rect key="frame" x="60" y="134" width="294" height="49.666666666666657"/>
-                                <fontDescription key="fontDescription" name="QuicksandDash-Regular" family="Quicksand" pointSize="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CookieMeUp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="vSH-dW-7o6">
+                                <rect key="frame" x="31.333333333333343" y="144" width="351.66666666666663" height="64.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="55"/>
                                 <color key="textColor" red="0.37094807624816895" green="0.12397308647632599" blue="0.13301275670528412" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cookie-icon" translatesAutoresizingMaskIntoConstraints="NO" id="MVg-Dr-9Te">
-                                <rect key="frame" x="167" y="203.66666666666666" width="80" height="79.999999999999972"/>
+                                <rect key="frame" x="167.33333333333334" y="228.33333333333337" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Qjc-19-zAh"/>
                                     <constraint firstAttribute="height" constant="80" id="X8u-g1-enx"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRu-Cc-A4c">
-                                <rect key="frame" x="181" y="401" width="51" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRu-Cc-A4c">
+                                <rect key="frame" x="181.33333333333334" y="379.33333333333331" width="51" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Buyer">
                                     <color key="titleColor" red="0.80697774887084961" green="0.30521738529205322" blue="0.22755292057991028" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,17 +73,15 @@
                         <color key="tintColor" red="0.98073065280000005" green="1" blue="0.99995827670000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fGH-g2-sCh" firstAttribute="centerX" secondItem="MVg-Dr-9Te" secondAttribute="centerX" id="47h-mV-FWM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fGH-g2-sCh" secondAttribute="bottom" constant="160" id="Ayu-F7-gIB"/>
+                            <constraint firstItem="nRu-Cc-A4c" firstAttribute="top" secondItem="us4-th-hfh" secondAttribute="bottom" constant="30" id="IUL-xQ-bK9"/>
+                            <constraint firstItem="fGH-g2-sCh" firstAttribute="top" secondItem="nRu-Cc-A4c" secondAttribute="bottom" constant="20" id="Rsk-BI-bCu"/>
                             <constraint firstItem="nRu-Cc-A4c" firstAttribute="centerX" secondItem="MVg-Dr-9Te" secondAttribute="centerX" id="Sod-eZ-d7T"/>
                             <constraint firstItem="MVg-Dr-9Te" firstAttribute="centerX" secondItem="vSH-dW-7o6" secondAttribute="centerX" id="VH6-G3-uiG"/>
-                            <constraint firstItem="vSH-dW-7o6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="cch-XN-x8N"/>
+                            <constraint firstItem="vSH-dW-7o6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="cch-XN-x8N"/>
                             <constraint firstItem="us4-th-hfh" firstAttribute="top" secondItem="MVg-Dr-9Te" secondAttribute="bottom" constant="20" id="mFg-Mt-rTh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vSH-dW-7o6" secondAttribute="trailing" constant="60" id="nn4-Dk-ciG"/>
-                            <constraint firstItem="vSH-dW-7o6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="oQz-sE-EOs"/>
-                            <constraint firstItem="nRu-Cc-A4c" firstAttribute="top" relation="greaterThanOrEqual" secondItem="us4-th-hfh" secondAttribute="bottom" constant="8" id="rcK-lZ-Cmf"/>
+                            <constraint firstItem="vSH-dW-7o6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nFw-5p-czf"/>
                             <constraint firstItem="MVg-Dr-9Te" firstAttribute="top" secondItem="vSH-dW-7o6" secondAttribute="bottom" constant="20" id="sbb-lY-JZK"/>
                             <constraint firstItem="us4-th-hfh" firstAttribute="centerX" secondItem="MVg-Dr-9Te" secondAttribute="centerX" id="ydu-Hw-phE"/>
-                            <constraint firstItem="fGH-g2-sCh" firstAttribute="top" secondItem="nRu-Cc-A4c" secondAttribute="bottom" constant="16" id="ynw-hj-xdW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
