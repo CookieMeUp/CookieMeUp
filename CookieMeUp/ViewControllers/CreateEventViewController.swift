@@ -90,9 +90,10 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
                                                       longitude: location.coordinate.longitude,
                                                       zoom: self.zoomLevel)
             let marker = GMSMarker()
+            let placeMark = placemarks.first as? CLPlacemark
             marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            marker.title = "Sydney"
-            marker.snippet = "Australia"
+            marker.title = placeMark?.name
+            marker.snippet = placeMark?.locality
             marker.map = self.mapView
             if self.mapView.isHidden {
                 self.mapView.isHidden = false
@@ -106,7 +107,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
         let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
         let picker = DateTimePicker.show(selected: Date(), minimumDate: min, maximumDate: max)
-        picker.doneBackgroundColor = UIColor(red: 249/255.0, green: 228/255.0, blue: 200/255.0, alpha: 1.0)
+  
         picker.timeInterval = DateTimePicker.MinuteInterval.five
 
         picker.highlightColor = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
@@ -123,7 +124,6 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         picker.completionHandler = { date in
             let formatter = DateFormatter()
             formatter.dateFormat = "hh:mm aa MM/dd/YYYY"
-            self.title = formatter.string(from: date)
         }
         picker.delegate = self
         self.picker = picker
@@ -132,7 +132,8 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
         dPicker = picker
-       dateLabel.text = picker.selectedDateString
+        dateLabel.text = picker.selectedDateString
+        dateLabel.textColor = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -192,21 +193,23 @@ extension CreateEventViewController: CLLocationManagerDelegate {
             formatAddress = formatAddress + placeMark.administrativeArea! + ","
             formatAddress = formatAddress + placeMark.postalCode! + ","
             formatAddress = formatAddress + placeMark.country!
-  
+            
             self.selectedAdress = formatAddress
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            marker.title = placeMark?.name
+            print("Adding snipper")
+            marker.snippet = placeMark?.locality
+            marker.map = self.mapView
+            if self.mapView.isHidden {
+                self.self.mapView.isHidden = false
+                self.mapView.camera = camera
+            } else {
+                self.mapView.animate(to: camera)
+            }
         })
         //END
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-        if mapView.isHidden {
-            mapView.isHidden = false
-            mapView.camera = camera
-        } else {
-            mapView.animate(to: camera)
-        }
+
         
     }
     // Handle authorization for the location manager.

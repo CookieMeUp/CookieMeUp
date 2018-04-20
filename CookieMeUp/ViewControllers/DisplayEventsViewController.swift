@@ -58,12 +58,19 @@ class DisplayEventsViewController: UIViewController,UITabBarControllerDelegate {
                 for(key,value) in events!{
                     let arrayInfo = value as? [String:Any]
                     let event = Event(latitude: arrayInfo!["latitude"] as! Double, longitude: arrayInfo?["longitude"] as! Double, address: arrayInfo!["address"] as! String, firebaseUID: arrayInfo!["firebaseUid"] as! String, dateString: arrayInfo?["dateString"] as? String, randomId: arrayInfo?["id"] as! String)
+                    // I have taken a pin image which is a custom image
+               
+                    
+                    //creating a marker view
                     let position = CLLocationCoordinate2D(latitude: event.latitude!, longitude: event.longitute!)
                     let markerLocation = CLLocation(latitude: event.latitude!,longitude: event.longitute!)
                     let marker = GMSMarker(position: position)
                     let id = event.randomId
-                    marker.title = event.address
+                    let addressAra = event.address?.components(separatedBy: ",")
+                    marker.title = addressAra?[0]
+                    marker.snippet = addressAra?[1]
                     marker.map = self.mapView
+                    marker.icon = UIImage(named: "biscuit")
                     marker.userData = id
                     let simpleEve = simpleEvent(adressLabel: event.address, location: markerLocation, dateString: event.dateString,referenceId: id)
                     self.events.append(simpleEve)
