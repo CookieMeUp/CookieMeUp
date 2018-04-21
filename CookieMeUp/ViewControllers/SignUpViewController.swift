@@ -36,20 +36,30 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     @IBAction func onTapSignUp(_ sender: Any) {
         if let email = self.emailTextField.text, let password = self.passwordTextField.text,let id = girlScoutIdTextField.text{
             //TODO: ONCE ACCESS TO GIRLSCOUT DATABSE WE CAN BEGGIN CHECKING THIS PARt
-            if (emailTextField.text?.count)! < 3{
-                emailTextField.errorMessage = "Invalid Email"
-                if (passwordTextField.text?.count)! < 4{
-                    emailTextField.errorMessage = "Invalid Password"
-                    return
-                }
-                return
-            }
+ 
        
             ref.child("GirlScoutIds").observeSingleEvent(of: .value) { (snapshot) in
                 let dict = snapshot.value as? [String: AnyObject] ?? [:]
                 let values = dict.values as? String
                 //TODO: Find Id in Array
                 Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                    
+                    if error != nil{
+                        let errCode = AuthErrorCode(rawValue: error!._code)
+                        if errCode == .credentialAlreadyInUse{
+                            self.emailTextField.errorMessage = "Email In Use"
+                        }
+                        if errCode == .missingEmail{
+                            self.emailTextField.errorMessage = "Invalid Email"
+                        }
+                        if errCode == .invalidEmail{
+                            self.emailTextField.errorMessage = "Invalid Email"
+                        }
+                        if errCode == .weakPassword{
+                            self.passwordTextField.errorMessage = "At Least 6 Characters"
+                        }
+                        return
+                    }
                     let user = Auth.auth().currentUser;
                     self.ref.child("users").child((user?.uid)!).child("email").setValue(email)
                     self.ref.child("users").child((user?.uid)!).child("id").setValue(id)

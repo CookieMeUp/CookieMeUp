@@ -54,11 +54,56 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BuyerEventCell
         let info = dataEvent[indexPath.row]
         let addressAra = info.adressLabel?.components(separatedBy: ",")
-        print(addressAra)
-        let fullCity = addressAra![1] + ", " + addressAra![2]
+        let time = info.dateString?.components(separatedBy: " ")
+        let dateString = time![2].components(separatedBy: "/")
+        var monthName: String?
+        switch (dateString[0]){
+            case "01":
+                monthName = "January"
+                break
+            case "02":
+                monthName = "February"
+                break
+            case "03":
+                monthName = "March"
+                break
+            case "04":
+                monthName = "April"
+                break
+            case "05":
+                monthName = "May"
+                break
+            case "06":
+                monthName = "June"
+                break
+            case "07":
+                monthName = "July"
+                break
+            case "08":
+                monthName = "August"
+                break
+            case "09":
+                monthName = "September"
+                break
+            case "10":
+                monthName = "October"
+                break
+            case "11":
+                monthName = "November"
+                break
+            case "12":
+                monthName = "December"
+                break
+            default:
+                monthName = ""
+                break
+        }
+        let fullDate = monthName! + " " + dateString[1]
+        let secondPart = "," + dateString[2] + " @ " + time![0] + " " + time![1]
+        let fullCity = addressAra![1] + "," + addressAra![2]
         cell.cityLabel.text = fullCity
         cell.streetAdressLabel.text = addressAra![0]
-        cell.dateLabel.text = info.dateString
+        cell.dateLabel.text = fullDate + secondPart
         cell.distanceLabel.text = String(format:"%.2f", dataDist[indexPath.row]!) + "mi"
         
         return cell

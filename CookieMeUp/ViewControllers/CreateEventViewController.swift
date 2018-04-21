@@ -102,6 +102,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
             marker.title = placeMark?.name
             marker.snippet = placeMark?.locality
             marker.map = self.mapView
+            marker.icon = UIImage(named: "biscuit")
             if self.mapView.isHidden {
                 self.mapView.isHidden = false
                 self.mapView.camera = camera
@@ -214,6 +215,7 @@ extension CreateEventViewController: CLLocationManagerDelegate {
             marker.title = placeMark?.name
             print("Adding snipper")
             marker.snippet = placeMark?.locality
+            marker.icon = UIImage(named: "biscuit")
             marker.map = self.mapView
             if self.mapView.isHidden {
                 self.self.mapView.isHidden = false
@@ -258,7 +260,6 @@ extension CreateEventViewController: GMSAutocompleteResultsViewControllerDelegat
         
         selectedAdress = place.formattedAddress
         searchController?.searchBar.text = selectedAdress
-        
         zoomToSearchedLocation()
     }
     
