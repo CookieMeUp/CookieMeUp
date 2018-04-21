@@ -54,6 +54,9 @@ class DisplayEventsViewController: UIViewController,UITabBarControllerDelegate {
             let value = snapshot.value as? NSDictionary
             for user in value!{
                 let userInfo = user.value as? NSDictionary
+                if(userInfo!["events"] == nil){
+                    continue
+                }
                 let events = userInfo!["events"] as? NSDictionary
                 for(key,value) in events!{
                     let arrayInfo = value as? [String:Any]

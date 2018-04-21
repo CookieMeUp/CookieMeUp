@@ -472,7 +472,7 @@
                                 </connections>
                             </button>
                             <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXg-Kj-vhL">
-                                <rect key="frame" x="20" y="140.66666666666666" width="374" height="45"/>
+                                <rect key="frame" x="20" y="140.66666666666666" width="350" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="09j-tq-jFw"/>
                                     <constraint firstAttribute="width" constant="350" id="ZJN-8N-aQc"/>
