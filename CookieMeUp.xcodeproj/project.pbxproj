@@ -72,6 +72,7 @@
 		DD5FA4658F520EDC4BCCBE79 /* Pods_CookieMeUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookieMeUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA945318AD009F1C858106A8 /* Pods_CookieMeUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CookieMeUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC05D439206B383100C4057D /* simpleEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleEvent.swift; sourceTree = "<group>"; };
+		EC0B35D4208BF39100E94941 /* CookieMeUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CookieMeUp.entitlements; sourceTree = "<group>"; };
 		EC13BCC22044C04600836B0A /* CookieMeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookieMeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC13BCC52044C04600836B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC13BCC72044C04600836B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +188,7 @@
 		EC13BCC42044C04600836B0A /* CookieMeUp */ = {
 			isa = PBXGroup;
 			children = (
+				EC0B35D4208BF39100E94941 /* CookieMeUp.entitlements */,
 				EC40CC972083EE9B00C7A6BD /* SkyFloatingLabelTextField.swift */,
 				EC40CC992083EEB200C7A6BD /* SkyFloatingLabelTextFieldWithIcon.swift */,
 				EC40CC9B2083EEB600C7A6BD /* UITextField+fixCaretPosition.swift */,
@@ -350,6 +352,11 @@
 					EC13BCC12044C04600836B0A = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					EC13BCD52044C04600836B0A = {
 						CreatedOnToolsVersion = 9.2;
@@ -775,12 +782,14 @@
 			baseConfigurationReference = 0258748CB2359A4724A109F4 /* Pods-CookieMeUp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42BG7L54MA;
+				DEVELOPMENT_TEAM = 9RR37ASP3A;
 				INFOPLIST_FILE = CookieMeUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.CookieMeUp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CookieMeUp.thinmints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -791,12 +800,14 @@
 			baseConfigurationReference = C610F63499D0A43CBF0DF55D /* Pods-CookieMeUp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42BG7L54MA;
+				DEVELOPMENT_TEAM = 9RR37ASP3A;
 				INFOPLIST_FILE = CookieMeUp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.CookieMeUp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CookieMeUp.thinmints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

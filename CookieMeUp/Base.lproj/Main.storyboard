@@ -189,11 +189,12 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fB-j4-phr">
-                                <rect key="frame" x="172" y="350" width="70" height="30"/>
+                                <rect key="frame" x="167" y="350" width="80" height="34"/>
                                 <color key="backgroundColor" red="0.95694816110000003" green="0.78936141729999998" blue="0.43270236249999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="kb3-SM-bVf"/>
+                                    <constraint firstAttribute="width" constant="80" id="kb3-SM-bVf"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -262,6 +263,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uhg-n0-8v7">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" red="0.97309052939999996" green="0.87546408180000002" blue="0.73783421520000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.37094807619999998" green="0.1239730865" blue="0.13301275670000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.97309052939999996" green="0.87546408180000002" blue="0.73783421520000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BuyerEventCell" rowHeight="84" id="oio-fo-4ZP" customClass="BuyerEventCell" customModule="CookieMeUp" customModuleProvider="target">
@@ -415,11 +417,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqG-VL-0uG">
-                                <rect key="frame" x="182.33333333333334" y="342" width="50" height="30"/>
+                                <rect key="frame" x="177.33333333333334" y="342" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.95694816110000003" green="0.78936141729999998" blue="0.43270236249999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="OEU-3t-5Nx"/>
+                                    <constraint firstAttribute="width" constant="60" id="OEU-3t-5Nx"/>
+                                    <constraint firstAttribute="height" constant="30" id="OfX-09-0EZ"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -519,11 +523,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KO-mu-yFT">
-                                <rect key="frame" x="179.66666666666666" y="216.33333333333334" width="55" height="30"/>
+                                <rect key="frame" x="174.66666666666666" y="216.33333333333334" width="65" height="30"/>
                                 <color key="backgroundColor" red="0.95694816110000003" green="0.78936141729999998" blue="0.43270236249999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8M2-f6-tJh"/>
-                                    <constraint firstAttribute="width" constant="55" id="f2E-cr-Tdr"/>
+                                    <constraint firstAttribute="width" constant="65" id="f2E-cr-Tdr"/>
                                 </constraints>
                                 <state key="normal" title="Submit"/>
                                 <connections>
@@ -713,11 +717,12 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtM-HO-JoQ">
-                                <rect key="frame" x="144.66666666666666" y="250.66666666666663" width="124.99999999999997" height="30"/>
+                                <rect key="frame" x="144.66666666666666" y="250.66666666666663" width="124.99999999999997" height="34"/>
                                 <color key="backgroundColor" red="0.95694816110000003" green="0.78936141729999998" blue="0.43270236249999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="qby-cZ-iFK"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Submit Changes"/>
                                 <connections>
