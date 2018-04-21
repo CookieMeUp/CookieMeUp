@@ -491,13 +491,13 @@
                                 <color key="backgroundColor" red="0.97309052939999996" green="0.87546408180000002" blue="0.73783421520000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-Ro-Ph1">
-                                <rect key="frame" x="20.000000000000007" y="111.66666666666667" width="88.666666666666686" height="21.000000000000014"/>
+                                <rect key="frame" x="20.000000000000007" y="135" width="88.666666666666686" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.66703680200000004" green="0.66703680200000004" blue="0.66703680200000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cgi-Z1-JHz">
-                                <rect key="frame" x="359" y="104" width="35" height="35"/>
+                                <rect key="frame" x="359" y="127.33333333333331" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="OAQ-G9-er8"/>
                                     <constraint firstAttribute="height" constant="35" id="gxK-gM-oEs"/>
@@ -508,40 +508,49 @@
                                 </connections>
                             </button>
                             <view autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pXg-Kj-vhL">
-                                <rect key="frame" x="20" y="140.66666666666666" width="350" height="45"/>
+                                <rect key="frame" x="20" y="163.33333333333334" width="350" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="09j-tq-jFw"/>
                                     <constraint firstAttribute="width" constant="350" id="ZJN-8N-aQc"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KO-mu-yFT">
+                                <rect key="frame" x="179.66666666666666" y="216.33333333333334" width="55" height="30"/>
+                                <color key="backgroundColor" red="0.95694816110000003" green="0.78936141729999998" blue="0.43270236249999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8M2-f6-tJh"/>
+                                    <constraint firstAttribute="width" constant="55" id="f2E-cr-Tdr"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onTapCreate:" destination="8dZ-QT-hGA" eventType="touchUpInside" id="MF0-pC-1Bj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97309052939999996" green="0.87546408180000002" blue="0.73783421520000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="8KO-mu-yFT" firstAttribute="centerX" secondItem="ZFH-MK-7FC" secondAttribute="centerX" id="05E-6V-xiH"/>
                             <constraint firstItem="b5v-UA-cHf" firstAttribute="trailing" secondItem="7NY-3n-uAu" secondAttribute="trailing" id="6PL-ag-bgF"/>
                             <constraint firstItem="b5v-UA-cHf" firstAttribute="height" secondItem="ZFH-MK-7FC" secondAttribute="height" multiplier="0.66" id="BGl-jG-are"/>
+                            <constraint firstItem="1WW-Ro-Ph1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7NY-3n-uAu" secondAttribute="top" constant="16" id="Hdt-G0-lqC"/>
+                            <constraint firstItem="b5v-UA-cHf" firstAttribute="top" secondItem="8KO-mu-yFT" secondAttribute="bottom" constant="4" id="IiY-1X-Ldi"/>
                             <constraint firstItem="pXg-Kj-vhL" firstAttribute="top" secondItem="1WW-Ro-Ph1" secondAttribute="bottom" constant="8" id="ciK-dO-pAU"/>
-                            <constraint firstItem="Cgi-Z1-JHz" firstAttribute="top" secondItem="7NY-3n-uAu" secondAttribute="top" constant="40" id="eMg-m7-Ref"/>
                             <constraint firstItem="Cgi-Z1-JHz" firstAttribute="centerY" secondItem="1WW-Ro-Ph1" secondAttribute="centerY" id="l6h-zt-ysk"/>
+                            <constraint firstItem="8KO-mu-yFT" firstAttribute="top" secondItem="pXg-Kj-vhL" secondAttribute="bottom" constant="8" id="mnl-DX-DFO"/>
                             <constraint firstItem="1WW-Ro-Ph1" firstAttribute="leading" secondItem="7NY-3n-uAu" secondAttribute="leading" constant="20" id="rm6-m8-RJn"/>
                             <constraint firstItem="b5v-UA-cHf" firstAttribute="leading" secondItem="7NY-3n-uAu" secondAttribute="leading" id="rtW-Y7-JYd"/>
                             <constraint firstItem="b5v-UA-cHf" firstAttribute="bottom" secondItem="7NY-3n-uAu" secondAttribute="bottom" id="the-0D-3UA"/>
-                            <constraint firstItem="b5v-UA-cHf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="pXg-Kj-vhL" secondAttribute="bottom" constant="8" id="vMm-cX-iRf"/>
                             <constraint firstItem="7NY-3n-uAu" firstAttribute="trailing" secondItem="Cgi-Z1-JHz" secondAttribute="trailing" constant="20" id="wzG-HD-1S7"/>
                             <constraint firstItem="Cgi-Z1-JHz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1WW-Ro-Ph1" secondAttribute="trailing" constant="8" id="xvU-0Z-oyj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7NY-3n-uAu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Event" id="iyu-5t-hiw">
-                        <barButtonItem key="rightBarButtonItem" title="Create" image="forward-arrow" id="FHA-c8-RS5">
-                            <connections>
-                                <action selector="onTapCreate:" destination="8dZ-QT-hGA" id="AwV-5S-AX3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Create Event" id="iyu-5t-hiw"/>
                     <connections>
                         <outlet property="dateLabel" destination="1WW-Ro-Ph1" id="dAM-8x-p9C"/>
                         <outlet property="mapSubView" destination="b5v-UA-cHf" id="VyL-8d-ZYb"/>
                         <outlet property="searchView" destination="pXg-Kj-vhL" id="u8O-RT-GoI"/>
+                        <outlet property="submitButton" destination="8KO-mu-yFT" id="7wc-dM-xzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8K-Cb-Qbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -817,7 +826,6 @@
         <image name="calendar" width="128" height="128"/>
         <image name="cookie-icon" width="90" height="90"/>
         <image name="edit-brown" width="128" height="128"/>
-        <image name="forward-arrow" width="16" height="16"/>
         <image name="list-icon" width="16" height="16"/>
         <image name="location-icon" width="16" height="16"/>
         <image name="map-icon" width="16" height="16"/>

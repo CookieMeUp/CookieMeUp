@@ -14,6 +14,7 @@ class InitialSellerViewController: UIViewController,UITableViewDataSource,UITabl
     @IBOutlet weak var tableView: UITableView!
     var data: [Event] = []
     var ref: DatabaseReference!
+    var noDataLabel: UILabel?
     let cellIdentifier = "SellerEventCell"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,6 @@ class InitialSellerViewController: UIViewController,UITableViewDataSource,UITabl
                 self.data.append(event)
             }
             self.tableView.reloadData()
-            if(self.data.count == 0){
-                self.performSegue(withIdentifier: "createSegue", sender: nil)
-            }
             
         }
         
@@ -55,6 +53,20 @@ class InitialSellerViewController: UIViewController,UITableViewDataSource,UITabl
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("hello")
         print(data.count)
+        if(data.count == 0){
+            noDataLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel?.text          = "You have no events. Click + to create one."
+            noDataLabel?.textColor     = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
+            noDataLabel?.textAlignment = .center
+            noDataLabel?.numberOfLines = 0
+            noDataLabel?.lineBreakMode = .byWordWrapping
+            tableView.backgroundView  = noDataLabel
+            tableView.separatorStyle  = .none
+            
+        }else{
+            noDataLabel?.isHidden = true
+            
+        }
         return data.count
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

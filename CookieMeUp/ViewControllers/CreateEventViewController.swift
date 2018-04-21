@@ -15,6 +15,8 @@ import DateTimePicker
 
 class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     @IBOutlet weak var calendarButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
+    
     var placeMark: CLPlacemark?
     var picker: DateTimePicker?
     @IBOutlet weak var dateLabel: UILabel!
@@ -40,6 +42,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        submitButton.layer.cornerRadius = 10
         //GETTING CURRENT LOCATION FOR USER
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -73,7 +76,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         searchView.addSubview((searchController?.searchBar)!)
         searchController?.searchBar.sizeToFit()
         searchController?.hidesNavigationBarDuringPresentation = false
-     
+        
         
         // When UISearchController presents the results view, present it in
         // this view controller, not one further up the chain.
@@ -166,8 +169,15 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
                     return
                 }else{
                     ref.child("users").child((user?.uid)!).child("events").child(randomID.key).setValue(newEvent)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let feedViewController = storyboard.instantiateViewController(withIdentifier: "InitialSellerScreen")
+                    self.present(feedViewController, animated: true, completion: nil)
                 }
             }
+            ref.child("users").child((user?.uid)!).child("events").child(randomID.key).setValue(newEvent)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let feedViewController = storyboard.instantiateViewController(withIdentifier: "InitialSellerScreen")
+            self.present(feedViewController, animated: true, completion: nil)
         }
 
         
