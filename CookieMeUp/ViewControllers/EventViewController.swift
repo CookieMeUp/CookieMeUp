@@ -52,7 +52,11 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BuyerEventCell
         let info = dataEvent[indexPath.row]
-        cell.addressLabel.text = info.adressLabel
+        let addressAra = info.adressLabel?.components(separatedBy: ",")
+        print(addressAra)
+        let fullCity = addressAra![1] + ", " + addressAra![2]
+        cell.cityLabel.text = fullCity
+        cell.streetAdressLabel.text = addressAra![0]
         cell.dateLabel.text = info.dateString
         cell.distanceLabel.text = String(format:"%.2f", dataDist[indexPath.row]!) + "mi"
         

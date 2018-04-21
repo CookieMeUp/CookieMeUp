@@ -9,9 +9,13 @@
 import UIKit
 
 class InitialScreenViewController: UIViewController {
-
+    @IBOutlet weak var buyerBUtton: UIButton!
+    @IBOutlet weak var sellerBUtton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        buyerBUtton.layer.cornerRadius = 10
+        sellerBUtton.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }

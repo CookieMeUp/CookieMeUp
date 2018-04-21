@@ -9,9 +9,11 @@
 import UIKit
 
 class BuyerEventCell: UITableViewCell {
-    @IBOutlet weak var addressLabel: UILabel!
+ 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var streetAdressLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
