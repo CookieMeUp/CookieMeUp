@@ -68,6 +68,11 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
     @IBAction func onTapAddress(_ sender: UITapGestureRecognizer) {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
+        autocompleteController.tableCellBackgroundColor =  UIColor(red: 249/255.0, green: 228/255.0, blue: 200/255.0, alpha: 1.0)
+        autocompleteController.tableCellSeparatorColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0)
+        autocompleteController.primaryTextColor = UIColor(red: 216/255.0, green: 100/255.0, blue: 73/255.0, alpha: 1.0)
+        autocompleteController.secondaryTextColor = UIColor(red: 154/255.0, green: 105/255.0, blue: 73/255.0, alpha: 1.0)
+
         present(autocompleteController, animated: true, completion: nil)
         
     }

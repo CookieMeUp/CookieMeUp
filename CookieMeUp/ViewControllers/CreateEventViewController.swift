@@ -63,7 +63,10 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         //PROVIDING AUTOCOMPLETE FOR USER SEARCH ADDRESS
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
-        
+        resultsViewController?.tableCellBackgroundColor =  UIColor(red: 249/255.0, green: 228/255.0, blue: 200/255.0, alpha: 1.0)
+        resultsViewController?.tableCellSeparatorColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0)
+        resultsViewController?.primaryTextColor = UIColor(red: 216/255.0, green: 100/255.0, blue: 73/255.0, alpha: 1.0)
+        resultsViewController?.secondaryTextColor = UIColor(red: 154/255.0, green: 105/255.0, blue: 73/255.0, alpha: 1.0)
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.searchResultsUpdater = resultsViewController
         searchController?.searchBar.backgroundImage = UIImage()
