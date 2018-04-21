@@ -23,6 +23,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureFirebaseDatabaseReference()
+        signUpBUtton.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
         
     }

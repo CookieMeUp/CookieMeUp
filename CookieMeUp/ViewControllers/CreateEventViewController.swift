@@ -73,6 +73,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         searchController = UISearchController(searchResultsController: resultsViewController)
         searchController?.searchResultsUpdater = resultsViewController
         searchController?.searchBar.backgroundImage = UIImage()
+        searchController?.searchBar.placeholder = "Event Address"
         searchView.addSubview((searchController?.searchBar)!)
         searchController?.searchBar.sizeToFit()
         searchController?.hidesNavigationBarDuringPresentation = false
@@ -257,6 +258,7 @@ extension CreateEventViewController: GMSAutocompleteResultsViewControllerDelegat
         
         selectedAdress = place.formattedAddress
         searchController?.searchBar.text = selectedAdress
+        
         zoomToSearchedLocation()
     }
     

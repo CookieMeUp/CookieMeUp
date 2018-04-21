@@ -11,10 +11,12 @@ import Firebase
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var emailTextView: SkyFloatingLabelTextField!
+    @IBOutlet weak var logInButton: UIButton!
     
     @IBOutlet weak var passwordTextView: SkyFloatingLabelTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        logInButton.layer.cornerRadius = 10
         emailTextView.errorColor = UIColor.red
 
     }

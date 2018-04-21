@@ -22,6 +22,7 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+    
         // Do any additional setup after loading the view.
 //            let distanceMiles = (userLocation?.distance(from: item!))! / 1609.34
    
