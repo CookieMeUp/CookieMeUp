@@ -717,10 +717,10 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtM-HO-JoQ">
-                                <rect key="frame" x="144.66666666666666" y="250.66666666666663" width="124.99999999999997" height="34"/>
+                                <rect key="frame" x="132.33333333333334" y="250.66666666666663" width="150.00000000000003" height="34"/>
                                 <color key="backgroundColor" red="0.95694816110000003" green="0.78936141729999998" blue="0.43270236249999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="qby-cZ-iFK"/>
+                                    <constraint firstAttribute="width" constant="150" id="qby-cZ-iFK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="0.80697774889999996" green="0.30521738529999998" blue="0.22755292060000001" alpha="1" colorSpace="calibratedRGB"/>
