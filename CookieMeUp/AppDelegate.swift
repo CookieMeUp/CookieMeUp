@@ -14,8 +14,8 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
+    let center = UNUserNotificationCenter.current()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -37,8 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             }
         }
-        //registerForPushNotifications()
-
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow,error in})
+        checkAndSet()
         return true
     }
 
@@ -63,35 +63,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-//    func registerForPushNotifications() {
-//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge, .carPlay]) {
-//            (granted, error) in
-//            print("Permission granted: \(granted)")
-//            guard granted else { return }
-//            self.getNotificationSettings()
-//        }
-//    }
-//    func getNotificationSettings() {
-//        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
-//            print("Notification settings: \(settings)")
-//            guard settings.authorizationStatus == .authorized else { return }
-//            UIApplication.shared.registerForRemoteNotifications()
-//        }
-//    }
-//    func application(_ application: UIApplication,
-//                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-//        let tokenParts = deviceToken.map { data -> String in
-//            return String(format: "%02.2hhx", data)
-//        }
-//
-//        let token = tokenParts.joined()
-//        print("Device Token: \(token)")
-//    }
-//
-//    func application(_ application: UIApplication,
-//                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
-//        print("Failed to register: \(error)")
-//    }
+    func checkAndSet(){
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                // Notifications not allowed
+            }else{
+                print("seeting notification")
+                let content = UNMutableNotificationContent()
+                content.title = "Save The Date"
+                content.body = "Starting January girlscout cookie locations will start to appear."
+    
+                // Specify date components
+                var dateComponents = DateComponents()
+                dateComponents.year = 2018
+                dateComponents.month = 4
+                dateComponents.day = 22
+                dateComponents.timeZone = TimeZone(abbreviation: "PDT") // Japan Standard Time
+                dateComponents.hour = 13
+                dateComponents.minute = 31
+                
+                // Create date from components
+                let userCalendar = Calendar.current // user calendar
+                let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+                let request = UNNotificationRequest(identifier: "cookiesUp", content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(request,withCompletionHandler: nil)
+            }
+        }
 
+    }
 }
 
