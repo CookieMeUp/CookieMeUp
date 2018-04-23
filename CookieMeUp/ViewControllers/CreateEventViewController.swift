@@ -149,6 +149,15 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     }
 
     @IBAction func onTapCreate(_ sender: Any) {
+        if(dateLabel.text == "Select Date"){
+            dateLabel.text = "Please Select A Date"
+            dateLabel.textColor = UIColor.red
+            return
+        }
+        if(searchController?.searchBar.text?.isEmpty)!{
+            searchController?.searchBar.placeholder = "Please select address"
+            return
+        }
         let user = Auth.auth().currentUser
         let ref = Database.database().reference()
         let randomID = ref.child("users").child((user?.uid)!).child("events").childByAutoId()

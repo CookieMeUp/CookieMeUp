@@ -105,7 +105,7 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
         cell.cityLabel.text = fullCity
         cell.streetAdressLabel.text = addressAra![0]
         cell.dateLabel.text = fullDate + secondPart
-        cell.distanceLabel.text = String(format:"%.2f", dataDist[indexPath.row]!) + "mi"
+        cell.distanceLabel.text = String(format:"%.1f", dataDist[indexPath.row]!) + "mi"
         
         return cell
     }

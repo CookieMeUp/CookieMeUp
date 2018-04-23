@@ -36,7 +36,10 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
     @IBAction func onTapSignUp(_ sender: Any) {
         if let email = self.emailTextField.text, let password = self.passwordTextField.text,let id = girlScoutIdTextField.text{
             //TODO: ONCE ACCESS TO GIRLSCOUT DATABSE WE CAN BEGGIN CHECKING THIS PARt
- 
+            if( firstNameTextField.text?.isEmpty )!{
+                self.firstNameTextField.errorMessage = "Please enter a user name"
+            
+            }
        
             ref.child("GirlScoutIds").observeSingleEvent(of: .value) { (snapshot) in
                 let dict = snapshot.value as? [String: AnyObject] ?? [:]
