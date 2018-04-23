@@ -54,7 +54,8 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BuyerEventCell
         let info = dataEvent[indexPath.row]
-        let addressAra = info.adressLabel?.components(separatedBy: ",")
+        var addressAra = info.adressLabel?.components(separatedBy: ",")
+        
         let time = info.dateString?.components(separatedBy: " ")
         let dateString = time![2].components(separatedBy: "/")
         var monthName: String?
@@ -99,6 +100,7 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
                 monthName = ""
                 break
         }
+        addressAra![1].remove(at: addressAra![1].startIndex)
         let fullDate = monthName! + " " + dateString[1]
         let secondPart = "," + dateString[2] + " @ " + time![0] + " " + time![1]
         let fullCity = addressAra![1] + "," + addressAra![2]
