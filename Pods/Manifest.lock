@@ -73,6 +73,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - SkyFloatingLabelTextField (3.4.0)
+  - UITextView+Placeholder (1.2.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -84,6 +85,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlaces
   - SkyFloatingLabelTextField (~> 3.0)
+  - UITextView+Placeholder (~> 1.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
@@ -102,7 +104,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
 
-PODFILE CHECKSUM: 4b0a701505bd2aabb273f8568a6ac7c94090ceb9
+PODFILE CHECKSUM: 58769370796f7c6e8d8c8cd0dee5bcb0a34b11cc
 
 COCOAPODS: 1.4.0

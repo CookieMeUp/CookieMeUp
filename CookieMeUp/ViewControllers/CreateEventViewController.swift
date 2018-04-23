@@ -16,6 +16,7 @@ import DateTimePicker
 class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     @IBOutlet weak var calendarButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     var placeMark: CLPlacemark?
     var picker: DateTimePicker?
@@ -161,7 +162,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         let user = Auth.auth().currentUser
         let ref = Database.database().reference()
         let randomID = ref.child("users").child((user?.uid)!).child("events").childByAutoId()
-        let newEvent = ["latitude" : (selectedLocation?.coordinate.latitude)!, "longitude": selectedLocation?.coordinate.longitude as Any, "address": selectedAdress!,"dateString": dateLabel.text!,"id": randomID.key,"firebaseUid": user?.uid] as [String : Any]
+        let newEvent = ["latitude" : (selectedLocation?.coordinate.latitude)!, "longitude": selectedLocation?.coordinate.longitude as Any, "address": selectedAdress!,"dateString": dateLabel.text!,"id": randomID.key,"firebaseUid": user?.uid , "description": descriptionTextView.text ?? "Empty" ] as [String : Any]
         ref.child("users").child((user?.uid)!).child("events").observeSingleEvent(of: .value) { (snapshot) in
             let events = snapshot.value as? [String: AnyObject] ?? [:]
             let formatter = DateFormatter()

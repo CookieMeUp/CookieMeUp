@@ -16,6 +16,7 @@ target 'CookieMeUp' do
   pod 'AFNetworking'
   pod 'DateTimePicker'
   pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'UITextView+Placeholder', '~> 1.2'
 
   target 'CookieMeUpTests' do
     inherit! :search_paths

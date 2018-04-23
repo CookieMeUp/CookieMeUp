@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "521CEC6FEB93A168B546C54CFB993311"
-               BuildableName = "Pods_CookieMeUp.framework"
-               BlueprintName = "Pods-CookieMeUp"
+               BlueprintIdentifier = "A1267833F5F1DC5556E477F4E6901DF5"
+               BuildableName = "UITextView_Placeholder.framework"
+               BlueprintName = "UITextView+Placeholder"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "521CEC6FEB93A168B546C54CFB993311"
-            BuildableName = "Pods_CookieMeUp.framework"
-            BlueprintName = "Pods-CookieMeUp"
+            BlueprintIdentifier = "A1267833F5F1DC5556E477F4E6901DF5"
+            BuildableName = "UITextView_Placeholder.framework"
+            BlueprintName = "UITextView+Placeholder"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

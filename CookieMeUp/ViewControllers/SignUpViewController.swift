@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
             //TODO: ONCE ACCESS TO GIRLSCOUT DATABSE WE CAN BEGGIN CHECKING THIS PARt
             if( firstNameTextField.text?.isEmpty )!{
                 self.firstNameTextField.errorMessage = "Please enter a user name"
-            
+                return 
             }
        
             ref.child("GirlScoutIds").observeSingleEvent(of: .value) { (snapshot) in
