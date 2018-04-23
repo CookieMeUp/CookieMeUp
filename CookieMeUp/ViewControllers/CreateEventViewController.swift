@@ -195,13 +195,13 @@ extension CreateEventViewController: CLLocationManagerDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
                                               longitude: location.coordinate.longitude,
                                               zoom: zoomLevel)
+        print("Zooming to location")
         //Friendly user location
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
             // Place details
             var placeMark: CLPlacemark!
             placeMark = placemarks?[0]
-            print(placeMark.name)
             var formatAddress: String = ""
             formatAddress = formatAddress + placeMark.name! + ","
             formatAddress = formatAddress + placeMark.locality! + ","
@@ -213,7 +213,6 @@ extension CreateEventViewController: CLLocationManagerDelegate {
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             marker.title = placeMark?.name
-            print("Adding snipper")
             marker.snippet = placeMark?.locality
             marker.icon = UIImage(named: "biscuit")
             marker.map = self.mapView
