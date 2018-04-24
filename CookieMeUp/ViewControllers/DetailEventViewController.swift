@@ -20,20 +20,145 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var descriptionView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateLabel.text = event.dateString
-        addressLabel.text = event.address
+        dateLabel.text = formatDate(date: event.dateString)
+        addressLabel.text = formatAddress(address: event.address)
+        descriptionView.text = event.description
         submitChanges.layer.cornerRadius = 10
         submitChanges.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
+    func formatAddress(address: String?) -> String{
+        var addressAra = address?.components(separatedBy: ",")
+        var resultString: String?
+        resultString = addressAra![0] + "\n"
+        
+        addressAra![1].remove(at: addressAra![1].startIndex)
+        resultString = resultString! + addressAra![1] + "," + addressAra![2]
+        return resultString!
+    }
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
-        dateLabel.text = picker.selectedDateString
+        
+        dateLabel.text = formatDatePicker(date: picker.selectedDateString)
+        event.dateString = picker.selectedDateString
+    }
+    func formatDatePicker(date: String?) -> String {
+        let time = date?.components(separatedBy: " ")
+        let dateString = time![2].components(separatedBy: "/")
+        var date: String?
+        var monthName: String?
+        
+        switch (dateString[1]){
+        case "01":
+            monthName = "January"
+            break
+        case "02":
+            monthName = "February"
+            break
+        case "03":
+            monthName = "March"
+            break
+        case "04":
+            monthName = "April"
+            break
+        case "05":
+            monthName = "May"
+            break
+        case "06":
+            monthName = "June"
+            break
+        case "07":
+            monthName = "July"
+            break
+        case "08":
+            monthName = "August"
+            break
+        case "09":
+            monthName = "September"
+            break
+        case "10":
+            monthName = "October"
+            break
+        case "11":
+            monthName = "November"
+            break
+        case "12":
+            monthName = "December"
+            break
+        default:
+            monthName = ""
+            break
+        }
+        let secondPart = "," + dateString[2] + " @ " + time![0] + " " + time![1]
+        print(monthName)
+        date = monthName!
+        date = date! + " "
+        date = date! + dateString[0]
+        date = date! + secondPart
+        print(date)
+        return date!
+    }
+    func formatDate(date: String?) -> String {
+        let time = date?.components(separatedBy: " ")
+        let dateString = time![2].components(separatedBy: "/")
+        var date: String?
+        var monthName: String?
+        print(time)
+        print(dateString)
+        switch (dateString[0]){
+        case "01":
+            monthName = "January"
+            break
+        case "02":
+            monthName = "February"
+            break
+        case "03":
+            monthName = "March"
+            break
+        case "04":
+            monthName = "April"
+            break
+        case "05":
+            monthName = "May"
+            break
+        case "06":
+            monthName = "June"
+            break
+        case "07":
+            monthName = "July"
+            break
+        case "08":
+            monthName = "August"
+            break
+        case "09":
+            monthName = "September"
+            break
+        case "10":
+            monthName = "October"
+            break
+        case "11":
+            monthName = "November"
+            break
+        case "12":
+            monthName = "December"
+            break
+        default:
+            monthName = ""
+            break
+        }
+        let secondPart = "," + dateString[2] + " @ " + time![0] + " " + time![1]
+
+        date = monthName!
+        date = date! + " "
+        date = date! + dateString[1]
+        date = date! + secondPart
+        print(date)
+        return date!
     }
     @IBAction func onTapDate(_ sender: Any) {
-        print("TapDate")
         let min = Date().addingTimeInterval(-60 * 60 * 24 * 4)
         let max = Date().addingTimeInterval(60 * 60 * 24 * 4)
         let picker = DateTimePicker.show(selected: Date(), minimumDate: min, maximumDate: max)
@@ -52,16 +177,22 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
         picker.completionHandler = { date in
             let formatter = DateFormatter()
             formatter.dateFormat = "hh:mm aa dd/MM/YYYY"
-            self.title = formatter.string(from: date)
         }
         picker.delegate = self
         self.picker = picker
     }
     @IBAction func onTapSubmit(_ sender: Any) {
+        print("Adding cahnges")
         let user = Auth.auth().currentUser
         let ref = Database.database().reference()
-        let firebaseEvent = ["latitude" : event.latitude!, "longitude": event.longitute!, "address": event.address!,"dateString": event.dateString!,"id": event.randomId!] as [String : Any]
+        let firebaseEvent = ["latitude" : event.latitude!, "longitude": event.longitute!, "address": event.address!,"dateString": event.dateString!,"id": event.randomId!,"firebaseUid": event.firebaseUID!,"description": descriptionView.text] as [String : Any]
         ref.child("users").child((user?.uid)!).child("events").child(self.event.randomId!).setValue(firebaseEvent)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let feedViewController = storyboard.instantiateViewController(withIdentifier: "InitialSellerScreen")
+        self.present(feedViewController, animated: true, completion: nil)
+
+
+        
     }
     
     
@@ -97,7 +228,7 @@ extension DetailEventViewController: GMSAutocompleteViewControllerDelegate {
     
     // Handle the user's selection.
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        addressLabel.text = place.formattedAddress
+        addressLabel.text = formatAddress(address: place.formattedAddress)
         let geoCoder = CLGeocoder()
         
         geoCoder.geocodeAddressString(place.formattedAddress!) { (placemarks, error) in

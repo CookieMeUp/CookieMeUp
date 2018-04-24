@@ -38,13 +38,14 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
             //TODO: ONCE ACCESS TO GIRLSCOUT DATABSE WE CAN BEGGIN CHECKING THIS PARt
             if( firstNameTextField.text?.isEmpty )!{
                 self.firstNameTextField.errorMessage = "Please enter a user name"
-                return 
+                return
             }
        
             ref.child("GirlScoutIds").observeSingleEvent(of: .value) { (snapshot) in
                 let dict = snapshot.value as? [String: AnyObject] ?? [:]
                 let values = dict.values as? String
                 //TODO: Find Id in Array
+                print("Calling add user")
                 Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                     
                     if error != nil{
@@ -66,8 +67,9 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
                     let user = Auth.auth().currentUser;
                     self.ref.child("users").child((user?.uid)!).child("email").setValue(email)
                     self.ref.child("users").child((user?.uid)!).child("id").setValue(id)
+                    self.ref.child("users").child((user?.uid)!).child("username").setValue(self.firstNameTextField.text)
                     let newViewController = self.storyboard?.instantiateViewController(withIdentifier: "InitialSellerScreen")
-                    
+                    print("Adding User")
                     // your code
                     
                     self.present(newViewController!, animated: true, completion: nil)

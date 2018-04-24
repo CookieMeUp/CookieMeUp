@@ -47,6 +47,7 @@ class DisplayEventsViewController: UIViewController,UITabBarControllerDelegate {
         mapView.isHidden = true
     }
     func populateMap(){
+        var userName: String?
         //Creating Markers For Events Near user
         let ref = Database.database().reference().child("users")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -54,13 +55,14 @@ class DisplayEventsViewController: UIViewController,UITabBarControllerDelegate {
             let value = snapshot.value as? NSDictionary
             for user in value!{
                 let userInfo = user.value as? NSDictionary
+                userName = userInfo?["username"] as! String
                 if(userInfo!["events"] == nil){
                     continue
                 }
                 let events = userInfo!["events"] as? NSDictionary
                 for(key,value) in events!{
                     let arrayInfo = value as? [String:Any]
-                    let event = Event(latitude: arrayInfo!["latitude"] as! Double, longitude: arrayInfo?["longitude"] as! Double, address: arrayInfo!["address"] as! String, firebaseUID: arrayInfo!["firebaseUid"] as! String, dateString: arrayInfo?["dateString"] as? String, randomId: arrayInfo?["id"] as! String)
+                    let event = Event(latitude: arrayInfo!["latitude"] as! Double, longitude: arrayInfo?["longitude"] as! Double, address: arrayInfo!["address"] as! String, firebaseUID: arrayInfo!["firebaseUid"] as! String, dateString: arrayInfo?["dateString"] as? String, randomId: arrayInfo?["id"] as! String, description: "",username:"")
                     // I have taken a pin image which is a custom image
                
                     
@@ -75,7 +77,8 @@ class DisplayEventsViewController: UIViewController,UITabBarControllerDelegate {
                     marker.map = self.mapView
                     marker.icon = UIImage(named: "biscuit")
                     marker.userData = id
-                    let simpleEve = simpleEvent(adressLabel: event.address, location: markerLocation, dateString: event.dateString,referenceId: id)
+                    
+                    let simpleEve = simpleEvent(adressLabel: event.address, location: markerLocation, dateString: event.dateString,referenceId: id, username: userName, description: arrayInfo?["description"] as! String)
                     self.events.append(simpleEve)
                     }
             }

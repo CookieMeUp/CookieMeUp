@@ -30,7 +30,7 @@ class InitialSellerViewController: UIViewController,UITableViewDataSource,UITabl
             let events = snapshot.value as? [String: AnyObject] ?? [:]
       
             for item in events{
-                let event = Event(latitude: (item.value["latitude"] as? Double)!, longitude: item.value["longitude"] as? Double, address: (item.value["address"] as? String)!, firebaseUID: (user?.uid)!, dateString: item.value["dateString"] as? String,randomId: item.value["id"] as? String)
+                let event = Event(latitude: (item.value["latitude"] as? Double)!, longitude: item.value["longitude"] as? Double, address: (item.value["address"] as? String)!, firebaseUID: (user?.uid)!, dateString: item.value["dateString"] as? String,randomId: item.value["id"] as? String, description: item.value["description"] as? String, username: item.value["username"] as? String)
                 self.data.append(event)
             }
             self.tableView.reloadData()
@@ -98,6 +98,7 @@ class InitialSellerViewController: UIViewController,UITableViewDataSource,UITabl
         cell.cityLabel.text = fullCity
         cell.addressLabel.text = addressAra![0]
         cell.dateLabel.text = fullDate + secondPart
+        cell.descriptionLabel.text = info.description
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

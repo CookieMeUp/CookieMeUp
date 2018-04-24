@@ -15,11 +15,15 @@ class simpleEvent{
     var dateString: String?
     var referenceId: String?
     var distance: Double?
-    init(adressLabel: String?, location: CLLocation?, dateString: String?,referenceId: String?){
+    var username: String?
+    var description: String?
+    init(adressLabel: String?, location: CLLocation?, dateString: String?,referenceId: String?,username: String?, description: String?){
         self.adressLabel = adressLabel
         self.location = location
         self.dateString = dateString
         self.referenceId = referenceId
+        self.username = username
+        self.description = description
         distance = nil
     }
 }

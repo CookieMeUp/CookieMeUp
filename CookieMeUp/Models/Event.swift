@@ -14,13 +14,17 @@ class Event{
     var firebaseUID: String?
     var dateString: String?
     var randomId: String?
-    init(latitude: Double,longitude: Double?,address: String,firebaseUID: String,dateString: String?,randomId: String?){
+    var description: String?
+    var username: String?
+    init(latitude: Double,longitude: Double?,address: String,firebaseUID: String,dateString: String?,randomId: String?, description: String?, username: String?){
         self.latitude  = latitude
         self.longitute = longitude
         self.address = address
         self.firebaseUID = firebaseUID
         self.dateString = dateString
         self.randomId = randomId
+        self.description = description
+        self.username = username
     }
     
 }
