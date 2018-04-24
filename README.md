@@ -40,6 +40,11 @@ CookieMeUp is an app aimed at increasing the sales of girl scout cookies while d
 
 [x] Color schemed decided. 
 
+[x] Only Allow Seller to post one event with the same location
+
+[x] Add Seller event description
+
+[x] Add sign up and login checks with information for user
 #### TO DO
-[] Only Allow Seller to post one event with the same location
+
 [] Finish UI for both buyer and seller. 
