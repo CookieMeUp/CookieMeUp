@@ -19,7 +19,7 @@ class DisplayEventsViewController: UIViewController,UITabBarControllerDelegate {
     var events: [simpleEvent] = []
    
     var placesClient: GMSPlacesClient!
-    var zoomLevel: Float = 15.0
+    var zoomLevel: Float = 11.5
     // The currently selected place.
     var selectedPlace: GMSPlace?
     let defaultLocation = CLLocation(latitude: -33.869405, longitude: 151.199)

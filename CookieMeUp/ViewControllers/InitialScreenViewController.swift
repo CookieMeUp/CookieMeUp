@@ -14,6 +14,9 @@ class InitialScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.applicationIconBadgeNumber = 0;
+        self.hideKeyboardWhenTappedAround()
+
         buyerBUtton.layer.cornerRadius = 10
         sellerBUtton.layer.cornerRadius = 10
 
@@ -51,4 +54,15 @@ class InitialScreenViewController: UIViewController {
     }
     */
 
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

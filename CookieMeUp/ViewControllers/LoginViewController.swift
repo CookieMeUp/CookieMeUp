@@ -18,6 +18,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         logInButton.layer.cornerRadius = 10
         emailTextView.errorColor = UIColor.red
+        self.hideKeyboardWhenTappedAround()
 
     }
 
@@ -66,3 +67,4 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     */
 
 }
+

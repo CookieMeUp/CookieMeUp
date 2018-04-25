@@ -24,6 +24,11 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+
+        descriptionView.layer.cornerRadius = 5.0
+        descriptionView.layer.borderWidth = 1.0
+        descriptionView.layer.borderColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0).cgColor
         dateLabel.text = formatDate(date: event.dateString)
         addressLabel.text = formatAddress(address: event.address)
         descriptionView.text = event.description

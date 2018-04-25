@@ -43,9 +43,11 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+
         descriptionTextView.layer.cornerRadius = 5.0
-        descriptionTextView.layer.borderWidth = 2.0
-        descriptionTextView.layer.borderColor = UIColor.brown.cgColor
+        descriptionTextView.layer.borderWidth = 1.0
+        descriptionTextView.layer.borderColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0).cgColor
         submitButton.layer.cornerRadius = 10
         //GETTING CURRENT LOCATION FOR USER
         locationManager = CLLocationManager()
