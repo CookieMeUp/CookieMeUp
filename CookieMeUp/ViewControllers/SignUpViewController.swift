@@ -49,19 +49,31 @@ class SignUpViewController: UIViewController,UITextFieldDelegate {
                 Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                     
                     if error != nil{
-                        let errCode = AuthErrorCode(rawValue: error!._code)
-                        if errCode == .credentialAlreadyInUse{
-                            self.emailTextField.errorMessage = "Email In Use"
+                        if let errCode = AuthErrorCode(rawValue: error!._code){
+                            switch errCode.rawValue{
+                            case 17007:
+                                self.emailTextField.errorMessage = "Email In Use"
+                                break
+                            default: break
                         }
-                        if errCode == .missingEmail{
-                            self.emailTextField.errorMessage = "Invalid Email"
+                       
+//                            if errCode.rawValue == 17007{
+//                            self.emailTextField.errorMessage = "Email In Use"
+//                        }
+//                        if errCode == .missingEmail{
+//                            self.emailTextField.errorMessage = "Invalid Email"
+//                        }
+//                        if errCode == .invalidEmail{
+//                            self.emailTextField.errorMessage = "Invalid Email"
+//                        }
+//                        if errCode == .weakPassword{
+//                            self.passwordTextField.errorMessage = "At Least 6 Characters"
+//                        }
+        
+                            
+
                         }
-                        if errCode == .invalidEmail{
-                            self.emailTextField.errorMessage = "Invalid Email"
-                        }
-                        if errCode == .weakPassword{
-                            self.passwordTextField.errorMessage = "At Least 6 Characters"
-                        }
+                        print("Error sign up")
                         return
                     }
                     let user = Auth.auth().currentUser;
