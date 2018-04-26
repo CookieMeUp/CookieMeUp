@@ -103,7 +103,7 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
         }
         addressAra![1].remove(at: addressAra![1].startIndex)
         let fullDate = monthName! + " " + dateString[1]
-        let secondPart = "," + dateString[2] + " @ " + time![0] + " " + time![1]
+        let secondPart = ", " + dateString[2] + " @ " + time![0] + " " + time![1]
         let fullCity = addressAra![1] + "," + addressAra![2]
         cell.userNameLabel.text = "By: " + info.username!
         cell.descriptionLabel.text = info.description

@@ -47,7 +47,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
 
         descriptionTextView.layer.cornerRadius = 5.0
         descriptionTextView.layer.borderWidth = 1.0
-        descriptionTextView.layer.borderColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0).cgColor
+        descriptionTextView.layer.borderColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 0.70).cgColor
         submitButton.layer.cornerRadius = 10
         //GETTING CURRENT LOCATION FOR USER
         locationManager = CLLocationManager()
@@ -72,13 +72,18 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         //PROVIDING AUTOCOMPLETE FOR USER SEARCH ADDRESS
         resultsViewController = GMSAutocompleteResultsViewController()
         resultsViewController?.delegate = self
+        
         resultsViewController?.tableCellBackgroundColor =  UIColor(red: 249/255.0, green: 228/255.0, blue: 200/255.0, alpha: 1.0)
         resultsViewController?.tableCellSeparatorColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0)
-        resultsViewController?.primaryTextColor = UIColor(red: 216/255.0, green: 100/255.0, blue: 73/255.0, alpha: 1.0)
+        resultsViewController?.primaryTextColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0)
         resultsViewController?.secondaryTextColor = UIColor(red: 154/255.0, green: 105/255.0, blue: 73/255.0, alpha: 1.0)
         searchController = UISearchController(searchResultsController: resultsViewController)
+        searchController?.searchBar.tintColor = UIColor(red: 216/255.0, green: 100/255.0, blue: 73/255.0, alpha: 1.0)
+        searchController?.searchBar.barTintColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0)
         searchController?.searchResultsUpdater = resultsViewController
         searchController?.searchBar.backgroundImage = UIImage()
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor(red: 216/255.0, green: 100/255.0, blue: 73/255.0, alpha: 1.0)]
+
         searchController?.searchBar.placeholder = "Event Address"
         searchView.addSubview((searchController?.searchBar)!)
         searchController?.searchBar.sizeToFit()
@@ -124,10 +129,10 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
   
         picker.timeInterval = DateTimePicker.MinuteInterval.five
 
-        picker.highlightColor = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
+        picker.highlightColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0)
         picker.darkColor = UIColor.darkGray
         picker.doneButtonTitle = "DONE"
-        picker.doneBackgroundColor = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
+        picker.doneBackgroundColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0)
         picker.locale = Locale(identifier: "en_GB")
         
         picker.todayButtonTitle = "Today"
@@ -147,7 +152,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
         dPicker = picker
         dateLabel.text = formatDate(date: picker.selectedDateString)
-        dateLabel.textColor = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
+        dateLabel.textColor = UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

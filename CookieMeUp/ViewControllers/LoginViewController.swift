@@ -12,10 +12,17 @@ import Firebase
 class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var emailTextView: SkyFloatingLabelTextField!
     @IBOutlet weak var logInButton: UIButton!
-    
+    @IBOutlet weak var signUpButton: UIButton!
+    let attributes : [NSAttributedStringKey: Any] = [
+        NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14),
+        NSAttributedStringKey.foregroundColor : UIColor(red: 114/255.0, green: 45/255.0, blue: 45/255.0, alpha: 1.0),
+        NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
     @IBOutlet weak var passwordTextView: SkyFloatingLabelTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let attributeString = NSMutableAttributedString(string: "Don't Have An Account?",
+                                                        attributes: attributes)
+        signUpButton.setAttributedTitle(attributeString, for: .normal)
         logInButton.layer.cornerRadius = 10
         emailTextView.errorColor = UIColor.red
         self.hideKeyboardWhenTappedAround()

@@ -93,7 +93,7 @@ class InitialSellerViewController: UIViewController,UITableViewDataSource,UITabl
         }
         addressAra![1].remove(at: addressAra![1].startIndex)
         let fullDate = monthName! + " " + dateString[1]
-        let secondPart = "," + dateString[2] + " @ " + time![0] + " " + time![1]
+        let secondPart = ", " + dateString[2] + " @ " + time![0] + " " + time![1]
         let fullCity = addressAra![1] + "," + addressAra![2]
         cell.cityLabel.text = fullCity
         cell.addressLabel.text = addressAra![0]
