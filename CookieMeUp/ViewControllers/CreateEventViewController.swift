@@ -146,14 +146,67 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
     
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
         dPicker = picker
-        dateLabel.text = picker.selectedDateString
+        dateLabel.text = formatDate(date: picker.selectedDateString)
         dateLabel.textColor = UIColor(red: 189/255.0, green: 69/255.0, blue: 41/255.0, alpha: 0.90)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    func formatDate(date: String?) -> String {
+        let time = date?.components(separatedBy: " ")
+        let dateString = time![2].components(separatedBy: "/")
+        var date: String?
+        var monthName: String?
+        switch (dateString[0]){
+        case "01":
+            monthName = "January"
+            break
+        case "02":
+            monthName = "February"
+            break
+        case "03":
+            monthName = "March"
+            break
+        case "04":
+            monthName = "April"
+            break
+        case "05":
+            monthName = "May"
+            break
+        case "06":
+            monthName = "June"
+            break
+        case "07":
+            monthName = "July"
+            break
+        case "08":
+            monthName = "August"
+            break
+        case "09":
+            monthName = "September"
+            break
+        case "10":
+            monthName = "October"
+            break
+        case "11":
+            monthName = "November"
+            break
+        case "12":
+            monthName = "December"
+            break
+        default:
+            monthName = ""
+            break
+        }
+        let secondPart = ", " + dateString[2] + " @ " + time![0] + " " + time![1]
+        
+        date = monthName!
+        date = date! + " "
+        date = date! + dateString[1]
+        date = date! + secondPart
+        return date!
+    }
     @IBAction func onTapCreate(_ sender: Any) {
         if(dateLabel.text == "Select Date"){
             dateLabel.text = "Please Select A Date"
@@ -167,7 +220,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         let user = Auth.auth().currentUser
         let ref = Database.database().reference()
         let randomID = ref.child("users").child((user?.uid)!).child("events").childByAutoId()
-        let newEvent = ["latitude" : (selectedLocation?.coordinate.latitude)!, "longitude": selectedLocation?.coordinate.longitude as Any, "address": selectedAdress!,"dateString": dateLabel.text!,"id": randomID.key,"firebaseUid": user?.uid , "description": descriptionTextView.text ?? "Empty" ] as [String : Any]
+        let newEvent = ["latitude" : (selectedLocation?.coordinate.latitude)!, "longitude": selectedLocation?.coordinate.longitude as Any, "address": selectedAdress!,"dateString": picker?.selectedDateString,"id": randomID.key,"firebaseUid": user?.uid , "description": descriptionTextView.text ?? "Empty" ] as [String : Any]
         ref.child("users").child((user?.uid)!).child("events").observeSingleEvent(of: .value) { (snapshot) in
             let events = snapshot.value as? [String: AnyObject] ?? [:]
             let formatter = DateFormatter()

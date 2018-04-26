@@ -47,7 +47,7 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
     }
     func dateTimePicker(_ picker: DateTimePicker, didSelectDate: Date) {
         
-        dateLabel.text = formatDatePicker(date: picker.selectedDateString)
+        dateLabel.text = formatDate(date: picker.selectedDateString)
         event.dateString = picker.selectedDateString
     }
     func formatDatePicker(date: String?) -> String {
@@ -97,8 +97,7 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
             monthName = ""
             break
         }
-        let secondPart = "," + dateString[2] + " @ " + time![0] + " " + time![1]
-        print(monthName)
+        let secondPart = ", " + dateString[2] + " @ " + time![0] + " " + time![1]
         date = monthName!
         date = date! + " "
         date = date! + dateString[0]
@@ -111,8 +110,6 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
         let dateString = time![2].components(separatedBy: "/")
         var date: String?
         var monthName: String?
-        print(time)
-        print(dateString)
         switch (dateString[0]){
         case "01":
             monthName = "January"
@@ -154,13 +151,12 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
             monthName = ""
             break
         }
-        let secondPart = "," + dateString[2] + " @ " + time![0] + " " + time![1]
+        let secondPart = ", " + dateString[2] + " @ " + time![0] + " " + time![1]
 
         date = monthName!
         date = date! + " "
         date = date! + dateString[1]
         date = date! + secondPart
-        print(date)
         return date!
     }
     @IBAction func onTapDate(_ sender: Any) {
@@ -176,20 +172,20 @@ class DetailEventViewController: UIViewController,DateTimePickerDelegate{
         
         picker.todayButtonTitle = "Today"
         picker.is12HourFormat = true
-        picker.dateFormat = "hh:mm aa dd/MM/YYYY"
+        picker.dateFormat = "hh:mm aa MM/dd/YYYY"
         //        picker.isTimePickerOnly = true
         picker.includeMonth = false // if true the month shows at top
         picker.completionHandler = { date in
             let formatter = DateFormatter()
-            formatter.dateFormat = "hh:mm aa dd/MM/YYYY"
+            formatter.dateFormat = "hh:mm aa MM/dd/YYYY"
         }
         picker.delegate = self
         self.picker = picker
     }
     @IBAction func onTapSubmit(_ sender: Any) {
-        print("Adding cahnges")
         let user = Auth.auth().currentUser
         let ref = Database.database().reference()
+        print(event.dateString)
         let firebaseEvent = ["latitude" : event.latitude!, "longitude": event.longitute!, "address": event.address!,"dateString": event.dateString!,"id": event.randomId!,"firebaseUid": event.firebaseUID!,"description": descriptionView.text] as [String : Any]
         ref.child("users").child((user?.uid)!).child("events").child(self.event.randomId!).setValue(firebaseEvent)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -245,7 +241,6 @@ extension DetailEventViewController: GMSAutocompleteViewControllerDelegate {
             self.event.latitude = self.selectedLocatoin?.coordinate.latitude
             self.event.longitute = self.selectedLocatoin?.coordinate.longitude
             self.event.address = place.formattedAddress
-            print(self.event)
 
             self.dismiss(animated: true, completion: nil)
         }

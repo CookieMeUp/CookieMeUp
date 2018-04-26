@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/DetailEventViewController.swift"
-            timestampString = "546403199.83894"
+            timestampString = "546475360.476571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/DetailEventViewController.swift"
-            timestampString = "546403199.839003"
+            timestampString = "546475360.476652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "246"
-            endingLineNumber = "246"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
             landmarkName = "viewController(_:didAutocompleteWith:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/DetailEventViewController.swift"
-            timestampString = "546403199.839048"
+            timestampString = "546475360.476702"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "viewController(_:didAutocompleteWith:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/DetailEventViewController.swift"
-            timestampString = "546403199.839088"
+            timestampString = "546475360.476746"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
             landmarkName = "onTapSubmit(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/DisplayEventsViewController.swift"
-            timestampString = "546312231.143643"
+            timestampString = "546474845.404511"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/DisplayEventsViewController.swift"
-            timestampString = "546312231.143682"
+            timestampString = "546474845.404556"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/DisplayEventsViewController.swift"
-            timestampString = "546312231.1437171"
+            timestampString = "546474845.404595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -154,13 +154,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760534"
+            timestampString = "546475360.476832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,13 +170,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760627"
+            timestampString = "546475360.477221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,13 +186,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760671"
+            timestampString = "546475360.477483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -202,13 +202,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760709"
+            timestampString = "546475360.477731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -250,13 +250,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760745"
+            timestampString = "546475360.477976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -298,13 +298,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760779"
+            timestampString = "546475360.4782161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -314,13 +314,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760811"
+            timestampString = "546475360.478452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -377,13 +377,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760844"
+            timestampString = "546475360.478686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "232"
+            endingLineNumber = "232"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -393,13 +393,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760878"
+            timestampString = "546475360.478918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -409,13 +409,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760911"
+            timestampString = "546475360.479147"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -425,13 +425,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760944"
+            timestampString = "546475360.479376"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -441,13 +441,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.760977"
+            timestampString = "546475360.4796081"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "235"
+            endingLineNumber = "235"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -457,13 +457,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.761009"
+            timestampString = "546475360.479838"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -473,13 +473,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.761042"
+            timestampString = "546475360.480067"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -521,13 +521,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.761075"
+            timestampString = "546475360.480293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -537,13 +537,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.761107"
+            timestampString = "546475360.48052"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -553,13 +553,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.76114"
+            timestampString = "546475360.48075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -569,13 +569,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.761171"
+            timestampString = "546475360.480976"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "onTapCreate(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -585,28 +585,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CookieMeUp/ViewControllers/CreateEventViewController.swift"
-            timestampString = "546398148.761204"
+            timestampString = "546475360.481207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CookieMeUp/ViewControllers/DetailEventViewController.swift"
-            timestampString = "546403199.839393"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "onTapSubmit(_:)"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "onTapCreate(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
