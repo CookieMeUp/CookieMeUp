@@ -225,6 +225,7 @@ class CreateEventViewController: UIViewController,DateTimePickerDelegate{
         let user = Auth.auth().currentUser
         let ref = Database.database().reference()
         let randomID = ref.child("users").child((user?.uid)!).child("events").childByAutoId()
+        descriptionTextView.text = descriptionTextView.text.trimmingCharacters(in: .whitespacesAndNewlines)
         let newEvent = ["latitude" : (selectedLocation?.coordinate.latitude)!, "longitude": selectedLocation?.coordinate.longitude as Any, "address": selectedAdress!,"dateString": picker?.selectedDateString,"id": randomID.key,"firebaseUid": user?.uid , "description": descriptionTextView.text ?? "Empty" ] as [String : Any]
         ref.child("users").child((user?.uid)!).child("events").observeSingleEvent(of: .value) { (snapshot) in
             let events = snapshot.value as? [String: AnyObject] ?? [:]

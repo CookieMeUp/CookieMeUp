@@ -14,9 +14,11 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
     @IBOutlet weak var tableView: UITableView!
     var events: [simpleEvent] =  []
     var dataEvent: [simpleEvent] = []
+    var partEvent: [simpleEvent] = []
     var dataDist: [Double?] = []
     var sortedEvents: [Double: [simpleEvent]] = [:]
     var userLocation: CLLocation?
+    var currentIndex: Int? = 0
     let cellIdentifier = "BuyerEventCell"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,40 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
                 dataDist.append(key)
             }
         }
-
+        for i in 0...3{
+            partEvent.append(dataEvent[i])
+        }
+    }
+    func loadMore(){
+        if dataEvent.count - partEvent.count < 4{
+            let itemsLeft = dataEvent.count - partEvent.count
+            var j = 0
+            while j < itemsLeft{
+                partEvent.append(dataEvent[currentIndex!+j])
+                j = j + 1
+            }
+            currentIndex = currentIndex! + itemsLeft
+            self.tableView.reloadData()
+            return
+        }
+        for i in 0...3{
+            partEvent.append(dataEvent[currentIndex!+i])
+        }
+        currentIndex = currentIndex! + 4
+        self.tableView.reloadData()
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        // Change 10.0 to adjust the distance from bottom
+        if maximumOffset - currentOffset <= 2.0 {
+            print("atBotto")
+            if(currentIndex! >= dataEvent.count){
+                return
+            }
+            self.loadMore()
+        
+        }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -54,7 +89,7 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BuyerEventCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        let info = dataEvent[indexPath.row]
+        let info = partEvent[indexPath.row]
         var addressAra = info.adressLabel?.components(separatedBy: ",")
         
         let time = info.dateString?.components(separatedBy: " ")
@@ -115,8 +150,7 @@ class EventViewController: UIViewController,UITableViewDataSource,UITableViewDel
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return dataEvent.count
+        return partEvent.count
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
